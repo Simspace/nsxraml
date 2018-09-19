@@ -15,7 +15,7 @@ baseUriParameters:
 version: 6.4
 securedBy: [basic]
 schemas:
-  - advancedConfigUpdate: !include schemas/advancedConfigUpdate.xsd
+  - advancedConfigUpdate: !include schemas/advancedConfigUpdate.json
     allUsersUpdate: !include schemas/allUsersUpdate.xsd
     applianceMgrBackupSettingsUpdate: !include schemas/applianceMgrBackupSettingsUpdate.xsd
     applianceUpdate: !include schemas/applianceUpdate.xsd
@@ -19751,20 +19751,7 @@ securitySchemes:
           displayName: advancedConfigUpdate
           description: Update SSL VPN advanced configuration.
           body:
-            application/xml:
-              example: |
-                <advancedConfig>
-                  <enableCompression></enableCompression>
-                  <forceVirtualKeyboard></forceVirtualKeyboard>
-                  <preventMultipleLogon></preventMultipleLogon>
-                  <randomizeVirtualkeys></randomizeVirtualkeys>
-                  <timeout>
-                    <forcedTimeout></forcedTimeout>
-                    <sessionIdleTimeout></sessionIdleTimeout>
-                  </timeout>
-                  <clientNotification></clientNotification>
-                  <enableLogging></enableLogging>
-                </advancedConfig>
+            application/json:
               schema: advancedConfigUpdate
       /script:
         displayName: script
