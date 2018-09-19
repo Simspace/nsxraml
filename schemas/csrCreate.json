@@ -1,0 +1,40 @@
+{
+  "required": [
+    "algorithm",
+    "keySize",
+    "subject"
+  ],
+  "type":"object",
+  "properties": {
+    "algorithm": {
+      "type":"string"
+    },
+    "keySize": {
+      "type":"string"
+    },
+    "subject": {
+      "required": [
+	"attribute"
+      ],
+      "type":"object",
+      "properties": {
+	"attribute": {
+	  "required": [
+	    "key",
+	    "value"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "key": {
+	      "type":"string"
+	    },
+	    "value": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

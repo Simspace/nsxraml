@@ -1,0 +1,16 @@
+{
+  "required": [
+    "enabled",
+    "rulePriority"
+  ],
+  "type":"object",
+  "properties": {
+    "enabled": {
+      "type":"string"
+    },
+    "rulePriority": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

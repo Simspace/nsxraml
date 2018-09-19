@@ -1,0 +1,52 @@
+{
+  "required": [
+    "ClassificationValue"
+  ],
+  "type":"object",
+  "properties": {
+    "ClassificationValue": {
+      "required": [
+	"id",
+	"value",
+	"classification"
+      ],
+      "type":"object",
+      "properties": {
+	"id": {
+	  "type":"string"
+	},
+	"value": {
+	  "type":"string"
+	},
+	"classification": {
+	  "required": [
+	    "id",
+	    "name",
+	    "providerName",
+	    "description",
+	    "customizable"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "id": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    },
+	    "providerName": {
+	      "type":"string"
+	    },
+	    "description": {
+	      "type":"string"
+	    },
+	    "customizable": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

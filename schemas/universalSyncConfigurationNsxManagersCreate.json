@@ -1,0 +1,28 @@
+{
+  "required": [
+    "nsxManagerIp",
+    "nsxManagerUsername",
+    "nsxManagerPassword",
+    "certificateThumbprint",
+    "isPrimary"
+  ],
+  "type":"object",
+  "properties": {
+    "nsxManagerIp": {
+      "type":"string"
+    },
+    "nsxManagerUsername": {
+      "type":"string"
+    },
+    "nsxManagerPassword": {
+      "type":"string"
+    },
+    "certificateThumbprint": {
+      "type":"string"
+    },
+    "isPrimary": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

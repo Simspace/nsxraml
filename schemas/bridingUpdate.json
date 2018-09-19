@@ -1,0 +1,36 @@
+{
+  "required": [
+    "version",
+    "enabled",
+    "bridge"
+  ],
+  "type":"object",
+  "properties": {
+    "version": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    },
+    "bridge": {
+      "required": [
+	"name",
+	"virtualWire",
+	"dvportGroup"
+      ],
+      "type":"object",
+      "properties": {
+	"name": {
+	  "type":"string"
+	},
+	"virtualWire": {
+	  "type":"string"
+	},
+	"dvportGroup": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

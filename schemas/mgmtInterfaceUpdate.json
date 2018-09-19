@@ -1,0 +1,40 @@
+{
+  "required": [
+    "mtu",
+    "connectedToId",
+    "addressGroups"
+  ],
+  "type":"object",
+  "properties": {
+    "mtu": {
+      "type":"string"
+    },
+    "connectedToId": {
+      "type":"string"
+    },
+    "addressGroups": {
+      "required": [
+	"addressGroup"
+      ],
+      "type":"object",
+      "properties": {
+	"addressGroup": {
+	  "required": [
+	    "primaryAddress",
+	    "subnetMask"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "primaryAddress": {
+	      "type":"string"
+	    },
+	    "subnetMask": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

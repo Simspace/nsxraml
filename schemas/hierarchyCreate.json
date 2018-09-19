@@ -1,0 +1,24 @@
+{
+  "required": [
+    "name",
+    "description",
+    "securityPolicy",
+    "securityGroup"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "securityPolicy": {
+      "type":"string"
+    },
+    "securityGroup": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

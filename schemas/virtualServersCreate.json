@@ -1,0 +1,60 @@
+{
+  "required": [
+    "name",
+    "description",
+    "enabled",
+    "ipAddress",
+    "protocol",
+    "port",
+    "connectionLimit",
+    "connectionRateLimit",
+    "applicationProfileId",
+    "defaultPoolId",
+    "enableServiceInsertion",
+    "accelerationEnabled",
+    "applicationRuleId"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"boolean"
+    },
+    "ipAddress": {
+      "type":"string"
+    },
+    "protocol": {
+      "type":"string"
+    },
+    "port": {
+      "type":"string"
+    },
+    "connectionLimit": {
+      "type":"integer"
+    },
+    "connectionRateLimit": {
+      "type":"integer"
+    },
+    "applicationProfileId": {
+      "type":"string"
+    },
+    "defaultPoolId": {
+      "type":"string"
+    },
+    "enableServiceInsertion": {
+      "type":"string"
+    },
+    "accelerationEnabled": {
+      "type":"boolean"
+    },
+    "applicationRuleId": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

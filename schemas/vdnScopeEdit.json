@@ -1,0 +1,40 @@
+{
+  "required": [
+    "objectId",
+    "clusters"
+  ],
+  "type":"object",
+  "properties": {
+    "objectId": {
+      "type":"string"
+    },
+    "clusters": {
+      "required": [
+	"cluster"
+      ],
+      "type":"object",
+      "properties": {
+	"cluster": {
+	  "required": [
+	    "cluster"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "cluster": {
+	      "required": [
+		"objectId"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"objectId": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

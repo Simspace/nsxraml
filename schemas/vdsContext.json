@@ -1,0 +1,52 @@
+{
+  "required": [
+    "teaming",
+    "mtu",
+    "switch"
+  ],
+  "type":"object",
+  "properties": {
+    "teaming": {
+      "type":"string"
+    },
+    "mtu": {
+      "type":"string"
+    },
+    "switch": {
+      "required": [
+	"objectId",
+	"name",
+	"revision",
+	"objectTypeName",
+	"type"
+      ],
+      "type":"object",
+      "properties": {
+	"objectId": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"revision": {
+	  "type":"string"
+	},
+	"objectTypeName": {
+	  "type":"string"
+	},
+	"type": {
+	  "required": [
+	    "typeName"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "typeName": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

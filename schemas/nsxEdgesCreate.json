@@ -1,0 +1,384 @@
+{
+  "required": [
+    "datacenterMoid",
+    "name",
+    "type",
+    "description",
+    "tenant",
+    "fqdn",
+    "vseLogLevel",
+    "enableAesni",
+    "enableFips",
+    "queryDaemon",
+    "dnsClient",
+    "autoConfiguration",
+    "cliSettings",
+    "vnics",
+    "appliances"
+  ],
+  "type":"object",
+  "properties": {
+    "datacenterMoid": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    },
+    "type": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "tenant": {
+      "type":"string"
+    },
+    "fqdn": {
+      "type":"string"
+    },
+    "vseLogLevel": {
+      "type":"string"
+    },
+    "enableAesni": {
+      "type":"string"
+    },
+    "enableFips": {
+      "type":"string"
+    },
+    "queryDaemon": {
+      "required": [
+	"enabled",
+	"port"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	},
+	"port": {
+	  "type":"string"
+	}
+      }
+    },
+    "dnsClient": {
+      "required": [
+	"primaryDns",
+	"secondaryDns",
+	"domainName"
+      ],
+      "type":"object",
+      "properties": {
+	"primaryDns": {
+	  "type":"string"
+	},
+	"secondaryDns": {
+	  "type":"string"
+	},
+	"domainName": {
+	  "type":"string"
+	}
+      }
+    },
+    "autoConfiguration": {
+      "required": [
+	"enabled",
+	"rulePriority"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	},
+	"rulePriority": {
+	  "type":"string"
+	}
+      }
+    },
+    "cliSettings": {
+      "required": [
+	"userName",
+	"password",
+	"remoteAccess"
+      ],
+      "type":"object",
+      "properties": {
+	"userName": {
+	  "type":"string"
+	},
+	"password": {
+	  "type":"string"
+	},
+	"remoteAccess": {
+	  "type":"string"
+	}
+      }
+    },
+    "vnics": {
+      "required": [
+	"vnic"
+      ],
+      "type":"object",
+      "properties": {
+	"vnic": {
+	  "required": [
+	    "index",
+	    "name",
+	    "type",
+	    "portgroupId",
+	    "mtu",
+	    "enableProxyArp",
+	    "enableSendRedirects",
+	    "isConnected",
+	    "outShapingPolicy",
+	    "inShapingPolicy",
+	    "fenceParameter",
+	    "macAddress",
+	    "addressGroups"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "index": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    },
+	    "type": {
+	      "type":"string"
+	    },
+	    "portgroupId": {
+	      "type":"string"
+	    },
+	    "mtu": {
+	      "type":"string"
+	    },
+	    "enableProxyArp": {
+	      "type":"string"
+	    },
+	    "enableSendRedirects": {
+	      "type":"string"
+	    },
+	    "isConnected": {
+	      "type":"string"
+	    },
+	    "outShapingPolicy": {
+	      "required": [
+		"averageBandwidth",
+		"peakBandwidth",
+		"burstSize",
+		"enabled",
+		"inherited"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"averageBandwidth": {
+		  "type":"string"
+		},
+		"peakBandwidth": {
+		  "type":"string"
+		},
+		"burstSize": {
+		  "type":"string"
+		},
+		"enabled": {
+		  "type":"string"
+		},
+		"inherited": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "inShapingPolicy": {
+	      "required": [
+		"averageBandwidth",
+		"peakBandwidth",
+		"burstSize",
+		"enabled",
+		"inherited"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"averageBandwidth": {
+		  "type":"string"
+		},
+		"peakBandwidth": {
+		  "type":"string"
+		},
+		"burstSize": {
+		  "type":"string"
+		},
+		"enabled": {
+		  "type":"string"
+		},
+		"inherited": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "fenceParameter": {
+	      "required": [
+		"key",
+		"value"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"key": {
+		  "type":"string"
+		},
+		"value": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "macAddress": {
+	      "required": [
+		"edgeVmHaIndex",
+		"value"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"edgeVmHaIndex": {
+		  "type":"string"
+		},
+		"value": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "addressGroups": {
+	      "required": [
+		"addressGroup"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"addressGroup": {
+		  "required": [
+		    "primaryAddress",
+		    "subnetMask",
+		    "secondaryAddresses"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "primaryAddress": {
+		      "type":"string"
+		    },
+		    "subnetMask": {
+		      "type":"string"
+		    },
+		    "secondaryAddresses": {
+		      "required": [
+			"ipAddress"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"ipAddress": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "appliances": {
+      "required": [
+	"applianceSize",
+	"enableCoreDump",
+	"appliance"
+      ],
+      "type":"object",
+      "properties": {
+	"applianceSize": {
+	  "type":"string"
+	},
+	"enableCoreDump": {
+	  "type":"string"
+	},
+	"appliance": {
+	  "required": [
+	    "resourcePoolId",
+	    "datastoreId",
+	    "hostId",
+	    "vmFolderId",
+	    "memoryReservation",
+	    "cpuReservation",
+	    "customField"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "resourcePoolId": {
+	      "type":"string"
+	    },
+	    "datastoreId": {
+	      "type":"string"
+	    },
+	    "hostId": {
+	      "type":"string"
+	    },
+	    "vmFolderId": {
+	      "type":"string"
+	    },
+	    "memoryReservation": {
+	      "required": [
+		"limit",
+		"reservation",
+		"shares"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"limit": {
+		  "type":"string"
+		},
+		"reservation": {
+		  "type":"string"
+		},
+		"shares": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "cpuReservation": {
+	      "required": [
+		"limit",
+		"reservation",
+		"shares"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"limit": {
+		  "type":"string"
+		},
+		"reservation": {
+		  "type":"string"
+		},
+		"shares": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "customField": {
+	      "required": [
+		"key",
+		"value"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"key": {
+		  "type":"string"
+		},
+		"value": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

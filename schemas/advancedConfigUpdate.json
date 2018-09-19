@@ -1,0 +1,48 @@
+{
+  "required": [
+    "enableCompression",
+    "forceVirtualKeyboard",
+    "preventMultipleLogon",
+    "randomizeVirtualkeys",
+    "clientNotification",
+    "enableLogging",
+    "timeout"
+  ],
+  "type":"object",
+  "properties": {
+    "enableCompression": {
+      "type":"string"
+    },
+    "forceVirtualKeyboard": {
+      "type":"string"
+    },
+    "preventMultipleLogon": {
+      "type":"string"
+    },
+    "randomizeVirtualkeys": {
+      "type":"string"
+    },
+    "clientNotification": {
+      "type":"string"
+    },
+    "enableLogging": {
+      "type":"string"
+    },
+    "timeout": {
+      "required": [
+	"forcedTimeout",
+	"sessionIdleTimeout"
+      ],
+      "type":"object",
+      "properties": {
+	"forcedTimeout": {
+	  "type":"string"
+	},
+	"sessionIdleTimeout": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

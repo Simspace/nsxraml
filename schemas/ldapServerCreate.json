@@ -1,0 +1,20 @@
+{
+  "required": [
+    "domainId",
+    "hostName",
+    "enabled"
+  ],
+  "type":"object",
+  "properties": {
+    "domainId": {
+      "type":"string"
+    },
+    "hostName": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

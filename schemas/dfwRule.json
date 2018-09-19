@@ -1,0 +1,140 @@
+{
+  "properties": {
+    "disabled": {
+      "type":"string"
+    },
+    "@logged": {
+      "type":"string"
+    },
+    "destinations": {
+      "properties": {
+	"excluded": {
+	  "type":"string"
+	},
+	"destination": {
+	  "required": [
+	    "name",
+	    "value",
+	    "type",
+	    "isValid"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "name": {
+	      "type":"string"
+	    },
+	    "value": {
+	      "type":"string"
+	    },
+	    "type": {
+	      "type":"string"
+	    },
+	    "isValid": {
+	      "type":"string"
+	    }
+	  }
+	}
+      },
+      "type":"object",
+      "required": [
+	"destination"
+      ]
+    },
+    "sources": {
+      "properties": {
+	"excluded": {
+	  "type":"string"
+	},
+	"source": {
+	  "required": [
+	    "name",
+	    "value",
+	    "type",
+	    "isValid"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "name": {
+	      "type":"string"
+	    },
+	    "value": {
+	      "type":"string"
+	    },
+	    "type": {
+	      "type":"string"
+	    },
+	    "isValid": {
+	      "type":"string"
+	    }
+	  }
+	}
+      },
+      "type":"object",
+      "required": [
+	"source"
+      ]
+    },
+    "name": {
+      "type":"string"
+    },
+    "action": {
+      "type":"string"
+    },
+    "notes": {
+      "type":"string"
+    },
+    "services": {
+      "required": [
+	"service"
+      ],
+      "type":"object",
+      "properties": {
+	"service": {
+	  "required": [
+	    "value"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "value": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "appliedToList": {
+      "required": [
+	"appliedTo"
+      ],
+      "type":"object",
+      "properties": {
+	"appliedTo": {
+	  "required": [
+	    "value",
+	    "type"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "value": {
+	      "type":"string"
+	    },
+	    "type": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "type":"object",
+  "required": [
+    "name",
+    "action",
+    "notes",
+    "services",
+    "destinations",
+    "sources",
+    "appliedToList"
+  ],
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

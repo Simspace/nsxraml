@@ -1,0 +1,179 @@
+{
+  "required": [
+    "securityPolicy"
+  ],
+  "type":"object",
+  "properties": {
+    "securityPolicy": {
+      "required": [
+	"name",
+	"description",
+	"precedence",
+	"actionsByCategory",
+	"securityGroupBinding",
+	"parent"
+      ],
+      "type":"object",
+      "properties": {
+	"actionsByCategory": {
+	  "required": [
+	    "category",
+	    "direction",
+	    "outsideSecondaryContainer",
+	    "action"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "action": {
+	      "properties": {
+		"class": {
+		  "type":"string"
+		},
+		"name": {
+		  "type":"string"
+		},
+		"description": {
+		  "type":"string"
+		},
+		"category": {
+		  "type":"string"
+		},
+		"actionType": {
+		  "type":"string"
+		},
+		"isActionEnforced": {
+		  "type":"string"
+		},
+		"isActive": {
+		  "type":"string"
+		},
+		"isEnabled": {
+		  "type":"string"
+		},
+		"logged": {
+		  "type":"string"
+		},
+		"scope": {
+		  "required": [
+		    "id",
+		    "name",
+		    "objectTypeName"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "id": {
+		      "type":"string"
+		    },
+		    "name": {
+		      "type":"string"
+		    },
+		    "objectTypeName": {
+		      "type":"string"
+		    }
+		  }
+		},
+		"applications": {
+		  "required": [
+		    "applicationGroup",
+		    "application"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "applicationGroup": {
+		      "required": [
+			"objectId"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"objectId": {
+			  "type":"string"
+			}
+		      }
+		    },
+		    "application": {
+		      "required": [
+			"objectId"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"objectId": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		},
+		"secondarySecurityGroup": {
+		  "required": [
+		    "objectId"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "objectId": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      },
+	      "type":"object",
+	      "required": [
+		"name",
+		"description",
+		"category",
+		"actionType",
+		"isActionEnforced",
+		"isActive",
+		"isEnabled",
+		"logged",
+		"scope",
+		"applications",
+		"secondarySecurityGroup"
+	      ]
+	    },
+	    "category": {
+	      "type":"string"
+	    },
+	    "direction": {
+	      "type":"string"
+	    },
+	    "outsideSecondaryContainer": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"name": {
+	  "type":"string"
+	},
+	"description": {
+	  "type":"string"
+	},
+	"precedence": {
+	  "type":"string"
+	},
+	"securityGroupBinding": {
+	  "required": [
+	    "objectId"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "objectId": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"parent": {
+	  "required": [
+	    "objectId"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "objectId": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

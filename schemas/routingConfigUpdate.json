@@ -1,0 +1,460 @@
+{
+  "required": [
+    "bgp",
+    "ospf",
+    "staticRouting",
+    "routingGlobalConfig"
+  ],
+  "type":"object",
+  "properties": {
+    "bgp": {
+      "required": [
+	"enabled",
+	"localAS",
+	"localASNumber",
+	"redistribution",
+	"bgpNeighbours"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	},
+	"localAS": {
+	  "type":"string"
+	},
+	"localASNumber": {
+	  "type":"string"
+	},
+	"redistribution": {
+	  "required": [
+	    "enabled",
+	    "rules"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "enabled": {
+	      "type":"string"
+	    },
+	    "rules": {
+	      "required": [
+		"rule"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"rule": {
+		  "required": [
+		    "prefixName",
+		    "action",
+		    "from"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "prefixName": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "from": {
+		      "required": [
+			"ospf",
+			"bgp",
+			"static",
+			"connected"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"ospf": {
+			  "type":"string"
+			},
+			"bgp": {
+			  "type":"string"
+			},
+			"static": {
+			  "type":"string"
+			},
+			"connected": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	},
+	"bgpNeighbours": {
+	  "required": [
+	    "bgpNeighbour"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "bgpNeighbour": {
+	      "required": [
+		"ipAddress",
+		"remoteAS",
+		"remoteASNumber",
+		"weight",
+		"holdDownTimer",
+		"keepAliveTimer",
+		"password",
+		"bgpFilters"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"ipAddress": {
+		  "type":"string"
+		},
+		"remoteAS": {
+		  "type":"string"
+		},
+		"remoteASNumber": {
+		  "type":"string"
+		},
+		"weight": {
+		  "type":"string"
+		},
+		"holdDownTimer": {
+		  "type":"string"
+		},
+		"keepAliveTimer": {
+		  "type":"string"
+		},
+		"password": {
+		  "type":"string"
+		},
+		"bgpFilters": {
+		  "required": [
+		    "bgpFilter"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "bgpFilter": {
+		      "required": [
+			"direction",
+			"action",
+			"network",
+			"ipPrefixGe",
+			"ipPrefixLe"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"direction": {
+			  "type":"string"
+			},
+			"action": {
+			  "type":"string"
+			},
+			"network": {
+			  "type":"string"
+			},
+			"ipPrefixGe": {
+			  "type":"string"
+			},
+			"ipPrefixLe": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "ospf": {
+      "required": [
+	"enabled",
+	"gracefulRestart",
+	"protocolAddress",
+	"forwardingAddress",
+	"redistribution",
+	"ospfInterfaces",
+	"ospfAreas"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	},
+	"gracefulRestart": {
+	  "type":"string"
+	},
+	"protocolAddress": {
+	  "type":"string"
+	},
+	"forwardingAddress": {
+	  "type":"string"
+	},
+	"redistribution": {
+	  "required": [
+	    "enabled",
+	    "rules"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "enabled": {
+	      "type":"string"
+	    },
+	    "rules": {
+	      "required": [
+		"rule"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"rule": {
+		  "required": [
+		    "prefixName",
+		    "action",
+		    "from"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "prefixName": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "from": {
+		      "required": [
+			"ospf",
+			"bgp",
+			"static",
+			"connected"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"ospf": {
+			  "type":"string"
+			},
+			"bgp": {
+			  "type":"string"
+			},
+			"static": {
+			  "type":"string"
+			},
+			"connected": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	},
+	"ospfInterfaces": {
+	  "required": [
+	    "ospfInterface"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ospfInterface": {
+	      "required": [
+		"vnic",
+		"areaId",
+		"helloInterval",
+		"deadInterval",
+		"priority",
+		"cost"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"vnic": {
+		  "type":"string"
+		},
+		"areaId": {
+		  "type":"string"
+		},
+		"helloInterval": {
+		  "type":"string"
+		},
+		"deadInterval": {
+		  "type":"string"
+		},
+		"priority": {
+		  "type":"string"
+		},
+		"cost": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	},
+	"ospfAreas": {
+	  "required": [
+	    "ospfArea"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ospfArea": {
+	      "required": [
+		"areaId",
+		"translateType7ToType5",
+		"type",
+		"authentication"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"areaId": {
+		  "type":"string"
+		},
+		"translateType7ToType5": {
+		  "type":"boolean"
+		},
+		"type": {
+		  "type":"string"
+		},
+		"authentication": {
+		  "required": [
+		    "type",
+		    "value"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "type": {
+		      "type":"string"
+		    },
+		    "value": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "staticRouting": {
+      "required": [
+	"defaultRoute",
+	"staticRoutes"
+      ],
+      "type":"object",
+      "properties": {
+	"defaultRoute": {
+	  "required": [
+	    "description",
+	    "vnic",
+	    "gatewayAddress",
+	    "mtu"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "description": {
+	      "type":"string"
+	    },
+	    "vnic": {
+	      "type":"string"
+	    },
+	    "gatewayAddress": {
+	      "type":"string"
+	    },
+	    "mtu": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"staticRoutes": {
+	  "required": [
+	    "route"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "route": {
+	      "required": [
+		"description",
+		"vnic",
+		"network",
+		"nextHop",
+		"mtu"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"description": {
+		  "type":"string"
+		},
+		"vnic": {
+		  "type":"string"
+		},
+		"network": {
+		  "type":"string"
+		},
+		"nextHop": {
+		  "type":"string"
+		},
+		"mtu": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "routingGlobalConfig": {
+      "required": [
+	"ecmp",
+	"routerId",
+	"ipPrefixes",
+	"logging"
+      ],
+      "type":"object",
+      "properties": {
+	"ecmp": {
+	  "type":"string"
+	},
+	"routerId": {
+	  "type":"string"
+	},
+	"ipPrefixes": {
+	  "required": [
+	    "ipPrefix"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ipPrefix": {
+	      "required": [
+		"name",
+		"ipAddress"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"name": {
+		  "type":"string"
+		},
+		"ipAddress": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	},
+	"logging": {
+	  "required": [
+	    "enable",
+	    "logLevel"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "enable": {
+	      "type":"string"
+	    },
+	    "logLevel": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

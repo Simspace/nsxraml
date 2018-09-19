@@ -1,0 +1,92 @@
+{
+  "required": [
+    "objectId",
+    "objectTypeName",
+    "vsmUuid",
+    "revision",
+    "name",
+    "extendedAttributes",
+    "prefixLength",
+    "gateway",
+    "dnsSuffix",
+    "dnsServer1",
+    "dnsServer2",
+    "ipRanges",
+    "type"
+  ],
+  "type":"object",
+  "properties": {
+    "objectId": {
+      "type":"string"
+    },
+    "objectTypeName": {
+      "type":"string"
+    },
+    "vsmUuid": {
+      "type":"string"
+    },
+    "revision": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    },
+    "extendedAttributes": {
+      "type":"string"
+    },
+    "prefixLength": {
+      "type":"string"
+    },
+    "gateway": {
+      "type":"string"
+    },
+    "dnsSuffix": {
+      "type":"string"
+    },
+    "dnsServer1": {
+      "type":"string"
+    },
+    "dnsServer2": {
+      "type":"string"
+    },
+    "ipRanges": {
+      "required": [
+	"ipRangeDto"
+      ],
+      "type":"object",
+      "properties": {
+	"ipRangeDto": {
+	  "required": [
+	    "id",
+	    "startAddress",
+	    "endAddress"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "id": {
+	      "type":"string"
+	    },
+	    "startAddress": {
+	      "type":"string"
+	    },
+	    "endAddress": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "type": {
+      "required": [
+	"typeName"
+      ],
+      "type":"object",
+      "properties": {
+	"typeName": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

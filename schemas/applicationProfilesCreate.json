@@ -1,0 +1,40 @@
+{
+  "required": [
+    "name",
+    "insertXForwardedFor",
+    "sslPassthrough",
+    "persistence"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "insertXForwardedFor": {
+      "type":"string"
+    },
+    "sslPassthrough": {
+      "type":"string"
+    },
+    "persistence": {
+      "required": [
+	"method",
+	"cookieName",
+	"cookieMode"
+      ],
+      "type":"object",
+      "properties": {
+	"method": {
+	  "type":"string"
+	},
+	"cookieName": {
+	  "type":"string"
+	},
+	"cookieMode": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,60 @@
+{
+  "required": [
+    "gateway",
+    "packetSizeMode",
+    "packetSize",
+    "destinationHost",
+    "sourceHost"
+  ],
+  "type":"object",
+  "properties": {
+    "gateway": {
+      "type":"string"
+    },
+    "packetSizeMode": {
+      "type":"string"
+    },
+    "packetSize": {
+      "type":"string"
+    },
+    "destinationHost": {
+      "required": [
+	"hostId",
+	"switchId",
+	"vlanId"
+      ],
+      "type":"object",
+      "properties": {
+	"hostId": {
+	  "type":"string"
+	},
+	"switchId": {
+	  "type":"string"
+	},
+	"vlanId": {
+	  "type":"string"
+	}
+      }
+    },
+    "sourceHost": {
+      "required": [
+	"hostId",
+	"switchId",
+	"vlanId"
+      ],
+      "type":"object",
+      "properties": {
+	"hostId": {
+	  "type":"string"
+	},
+	"switchId": {
+	  "type":"string"
+	},
+	"vlanId": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

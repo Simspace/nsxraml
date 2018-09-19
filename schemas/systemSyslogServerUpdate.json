@@ -1,0 +1,20 @@
+{
+  "required": [
+    "syslogServer",
+    "port",
+    "protocol"
+  ],
+  "type":"object",
+  "properties": {
+    "syslogServer": {
+      "type":"string"
+    },
+    "port": {
+      "type":"string"
+    },
+    "protocol": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

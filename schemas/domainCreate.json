@@ -1,0 +1,28 @@
+{
+  "required": [
+    "name",
+    "type",
+    "netbiosName",
+    "username",
+    "password"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "type": {
+      "type":"string"
+    },
+    "netbiosName": {
+      "type":"string"
+    },
+    "username": {
+      "type":"string"
+    },
+    "password": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,88 @@
+{
+  "required": [
+    "collectFlows",
+    "ignoreBlockedFlows",
+    "ignoreLayer2Flows",
+    "sourceIPs",
+    "destinationIPs",
+    "destinationPorts",
+    "service",
+    "destinationContainer",
+    "sourceContainer"
+  ],
+  "type":"object",
+  "properties": {
+    "collectFlows": {
+      "type":"string"
+    },
+    "ignoreBlockedFlows": {
+      "type":"string"
+    },
+    "ignoreLayer2Flows": {
+      "type":"string"
+    },
+    "sourceIPs": {
+      "type":"string"
+    },
+    "destinationIPs": {
+      "type":"string"
+    },
+    "destinationPorts": {
+      "type":"string"
+    },
+    "service": {
+      "required": [
+	"name",
+	"id"
+      ],
+      "type":"object",
+      "properties": {
+	"name": {
+	  "type":"string"
+	},
+	"id": {
+	  "type":"string"
+	}
+      }
+    },
+    "destinationContainer": {
+      "required": [
+	"name",
+	"id",
+	"type"
+      ],
+      "type":"object",
+      "properties": {
+	"name": {
+	  "type":"string"
+	},
+	"id": {
+	  "type":"string"
+	},
+	"type": {
+	  "type":"string"
+	}
+      }
+    },
+    "sourceContainer": {
+      "required": [
+	"name",
+	"id",
+	"type"
+      ],
+      "type":"object",
+      "properties": {
+	"name": {
+	  "type":"string"
+	},
+	"id": {
+	  "type":"string"
+	},
+	"type": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

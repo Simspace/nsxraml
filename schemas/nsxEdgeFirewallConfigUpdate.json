@@ -1,0 +1,234 @@
+{
+  "required": [
+    "enabled",
+    "firewallRules",
+    "globalConfig",
+    "defaultPolicy"
+  ],
+  "type":"object",
+  "properties": {
+    "enabled": {
+      "type":"string"
+    },
+    "firewallRules": {
+      "required": [
+	"firewallRule"
+      ],
+      "type":"object",
+      "properties": {
+	"firewallRule": {
+	  "required": [
+	    "ruleTag",
+	    "name",
+	    "matchTranslated",
+	    "direction",
+	    "action",
+	    "enabled",
+	    "loggingEnabled",
+	    "description",
+	    "application",
+	    "destination",
+	    "source"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ruleTag": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    },
+	    "matchTranslated": {
+	      "type":"string"
+	    },
+	    "direction": {
+	      "type":"string"
+	    },
+	    "action": {
+	      "type":"string"
+	    },
+	    "enabled": {
+	      "type":"string"
+	    },
+	    "loggingEnabled": {
+	      "type":"string"
+	    },
+	    "description": {
+	      "type":"string"
+	    },
+	    "application": {
+	      "required": [
+		"applicationId",
+		"service"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"applicationId": {
+		  "type":"string"
+		},
+		"service": {
+		  "required": [
+		    "protocol",
+		    "port",
+		    "sourcePort"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "protocol": {
+		      "type":"string"
+		    },
+		    "port": {
+		      "type":"string"
+		    },
+		    "sourcePort": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    },
+	    "destination": {
+	      "required": [
+		"exclude"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"exclude": {
+		  "type":"string"
+		},
+		"ipAddress": {
+		  "type":"array",
+		  "items": {
+		    "type":"string"
+		  },
+		  "minItems":0
+		},
+		"groupingObjectId": {
+		  "type":"array",
+		  "items": {
+		    "type":"string"
+		  },
+		  "minItems":0
+		},
+		"vnicGroupId": {
+		  "type":"array",
+		  "items": {
+		    "type":"string"
+		  },
+		  "minItems":0
+		}
+	      }
+	    },
+	    "source": {
+	      "required": [
+		"exclude"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"exclude": {
+		  "type":"string"
+		},
+		"ipAddress": {
+		  "type":"array",
+		  "items": {
+		    "type":"string"
+		  },
+		  "minItems":0
+		},
+		"groupingObjectId": {
+		  "type":"array",
+		  "items": {
+		    "type":"string"
+		  },
+		  "minItems":0
+		},
+		"vnicGroupId": {
+		  "type":"array",
+		  "items": {
+		    "type":"string"
+		  },
+		  "minItems":0
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "globalConfig": {
+      "required": [
+	"tcpPickOngoingConnections",
+	"tcpAllowOutOfWindowPackets",
+	"tcpSendResetForClosedVsePorts",
+	"dropInvalidTraffic",
+	"logInvalidTraffic",
+	"tcpTimeoutOpen",
+	"tcpTimeoutEstablished",
+	"tcpTimeoutClose",
+	"udpTimeout",
+	"icmpTimeout",
+	"icmp6Timeout",
+	"ipGenericTimeout",
+	"enableSynFloodProtection"
+      ],
+      "type":"object",
+      "properties": {
+	"tcpPickOngoingConnections": {
+	  "type":"string"
+	},
+	"tcpAllowOutOfWindowPackets": {
+	  "type":"string"
+	},
+	"tcpSendResetForClosedVsePorts": {
+	  "type":"string"
+	},
+	"dropInvalidTraffic": {
+	  "type":"string"
+	},
+	"logInvalidTraffic": {
+	  "type":"string"
+	},
+	"tcpTimeoutOpen": {
+	  "type":"string"
+	},
+	"tcpTimeoutEstablished": {
+	  "type":"string"
+	},
+	"tcpTimeoutClose": {
+	  "type":"string"
+	},
+	"udpTimeout": {
+	  "type":"string"
+	},
+	"icmpTimeout": {
+	  "type":"string"
+	},
+	"icmp6Timeout": {
+	  "type":"string"
+	},
+	"ipGenericTimeout": {
+	  "type":"string"
+	},
+	"enableSynFloodProtection": {
+	  "type":"string"
+	}
+      }
+    },
+    "defaultPolicy": {
+      "required": [
+	"action",
+	"loggingEnabled"
+      ],
+      "type":"object",
+      "properties": {
+	"action": {
+	  "type":"string"
+	},
+	"loggingEnabled": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

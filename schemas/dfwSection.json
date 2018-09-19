@@ -1,0 +1,166 @@
+{
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "@managedBy": {
+      "type":"string"
+    },
+    "@type": {
+      "type":"string"
+    },
+    "rule": {
+      "type":"array",
+      "items": {
+	"properties": {
+	  "disabled": {
+	    "type":"string"
+	  },
+	  "@logged": {
+	    "type":"string"
+	  },
+	  "destinations": {
+	    "properties": {
+	      "excluded": {
+		"type":"string"
+	      },
+	      "destination": {
+		"required": [
+		  "name",
+		  "value",
+		  "type",
+		  "isValid"
+		],
+		"type":"object",
+		"properties": {
+		  "name": {
+		    "type":"string"
+		  },
+		  "value": {
+		    "type":"string"
+		  },
+		  "type": {
+		    "type":"string"
+		  },
+		  "isValid": {
+		    "type":"string"
+		  }
+		}
+	      }
+	    },
+	    "type":"object",
+	    "required": [
+	      "destination"
+	    ]
+	  },
+	  "sources": {
+	    "properties": {
+	      "excluded": {
+		"type":"string"
+	      },
+	      "source": {
+		"required": [
+		  "name",
+		  "value",
+		  "type",
+		  "isValid"
+		],
+		"type":"object",
+		"properties": {
+		  "name": {
+		    "type":"string"
+		  },
+		  "value": {
+		    "type":"string"
+		  },
+		  "type": {
+		    "type":"string"
+		  },
+		  "isValid": {
+		    "type":"string"
+		  }
+		}
+	      }
+	    },
+	    "type":"object",
+	    "required": [
+	      "source"
+	    ]
+	  },
+	  "name": {
+	    "type":"string"
+	  },
+	  "action": {
+	    "type":"string"
+	  },
+	  "services": {
+	    "required": [
+	      "service"
+	    ],
+	    "type":"object",
+	    "properties": {
+	      "service": {
+		"required": [
+		  "destinationPort",
+		  "protocol",
+		  "subProtocol"
+		],
+		"type":"object",
+		"properties": {
+		  "destinationPort": {
+		    "type":"string"
+		  },
+		  "protocol": {
+		    "type":"string"
+		  },
+		  "subProtocol": {
+		    "type":"string"
+		  }
+		}
+	      }
+	    }
+	  },
+	  "appliedToList": {
+	    "required": [
+	      "appliedTo"
+	    ],
+	    "type":"object",
+	    "properties": {
+	      "appliedTo": {
+		"required": [
+		  "name",
+		  "value",
+		  "type",
+		  "isValid"
+		],
+		"type":"object",
+		"properties": {
+		  "name": {
+		    "type":"string"
+		  },
+		  "value": {
+		    "type":"string"
+		  },
+		  "type": {
+		    "type":"string"
+		  },
+		  "isValid": {
+		    "type":"string"
+		  }
+		}
+	      }
+	    }
+	  }
+	},
+	"type":"object",
+	"required": [
+	  "name",
+	  "action"
+	]
+      },
+      "minItems":0
+    }
+  },
+  "type":"object",
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

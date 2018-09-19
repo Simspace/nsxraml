@@ -1,0 +1,154 @@
+{
+  "properties": {
+    "id": {
+      "type":"string"
+    },
+    "@name": {
+      "type":"string"
+    },
+    "@timestamp": {
+      "type":"string"
+    },
+    "config": {
+      "properties": {
+	"timestamp": {
+	  "type":"string"
+	},
+	"layer2Sections": {
+	  "required": [
+	    "section"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "section": {
+	      "properties": {
+		"name": {
+		  "type":"string"
+		},
+		"@timestamp": {
+		  "type":"string"
+		},
+		"rule": {
+		  "properties": {
+		    "id": {
+		      "type":"string"
+		    },
+		    "@disabled": {
+		      "type":"string"
+		    },
+		    "@logged": {
+		      "type":"string"
+		    },
+		    "name": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "precedence": {
+		      "type":"string"
+		    }
+		  },
+		  "type":"object",
+		  "required": [
+		    "name",
+		    "action",
+		    "precedence"
+		  ]
+		}
+	      },
+	      "type":"object",
+	      "required": [
+		"rule"
+	      ]
+	    }
+	  }
+	},
+	"layer3Sections": {
+	  "required": [
+	    "section"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "section": {
+	      "properties": {
+		"name": {
+		  "type":"string"
+		},
+		"@timestamp": {
+		  "type":"string"
+		},
+		"rule": {
+		  "properties": {
+		    "id": {
+		      "type":"string"
+		    },
+		    "@disabled": {
+		      "type":"string"
+		    },
+		    "@logged": {
+		      "type":"string"
+		    },
+		    "name": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "precedence": {
+		      "type":"string"
+		    }
+		  },
+		  "type":"object",
+		  "required": [
+		    "name",
+		    "action",
+		    "precedence"
+		  ]
+		}
+	      },
+	      "type":"object",
+	      "required": [
+		"rule"
+	      ]
+	    }
+	  }
+	},
+	"contextId": {
+	  "type":"string"
+	},
+	"generationNumber": {
+	  "type":"string"
+	}
+      },
+      "type":"object",
+      "required": [
+	"contextId",
+	"generationNumber",
+	"layer2Sections",
+	"layer3Sections"
+      ]
+    },
+    "description": {
+      "type":"string"
+    },
+    "preserve": {
+      "type":"string"
+    },
+    "user": {
+      "type":"string"
+    },
+    "mode": {
+      "type":"string"
+    }
+  },
+  "type":"object",
+  "required": [
+    "description",
+    "preserve",
+    "user",
+    "mode",
+    "config"
+  ],
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

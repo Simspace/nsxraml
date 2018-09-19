@@ -1,0 +1,44 @@
+{
+  "required": [
+    "portalTitle",
+    "companyName",
+    "logoBackgroundColor",
+    "titleColor",
+    "topFrameColor",
+    "menuBarColor",
+    "rowAlternativeColor",
+    "bodyColor",
+    "rowColor"
+  ],
+  "type":"object",
+  "properties": {
+    "portalTitle": {
+      "type":"string"
+    },
+    "companyName": {
+      "type":"string"
+    },
+    "logoBackgroundColor": {
+      "type":"string"
+    },
+    "titleColor": {
+      "type":"string"
+    },
+    "topFrameColor": {
+      "type":"string"
+    },
+    "menuBarColor": {
+      "type":"string"
+    },
+    "rowAlternativeColor": {
+      "type":"string"
+    },
+    "bodyColor": {
+      "type":"string"
+    },
+    "rowColor": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

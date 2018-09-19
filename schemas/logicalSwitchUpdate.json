@@ -1,0 +1,24 @@
+{
+  "required": [
+    "name",
+    "description",
+    "tenantId",
+    "controlPlaneMode"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "tenantId": {
+      "type":"string"
+    },
+    "controlPlaneMode": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

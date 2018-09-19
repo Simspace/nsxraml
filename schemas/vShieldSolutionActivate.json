@@ -1,0 +1,12 @@
+{
+  "required": [
+    "moid"
+  ],
+  "type":"object",
+  "properties": {
+    "moid": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

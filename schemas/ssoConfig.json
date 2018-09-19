@@ -1,0 +1,24 @@
+{
+  "required": [
+    "ssoLookupServiceUrl",
+    "ssoAdminUsername",
+    "ssoAdminUserpassword",
+    "certificateThumbprint"
+  ],
+  "type":"object",
+  "properties": {
+    "ssoLookupServiceUrl": {
+      "type":"string"
+    },
+    "ssoAdminUsername": {
+      "type":"string"
+    },
+    "ssoAdminUserpassword": {
+      "type":"string"
+    },
+    "certificateThumbprint": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

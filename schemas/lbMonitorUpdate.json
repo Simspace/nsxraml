@@ -1,0 +1,36 @@
+{
+  "required": [
+    "type",
+    "interval",
+    "timeout",
+    "maxRetries",
+    "method",
+    "url",
+    "name"
+  ],
+  "type":"object",
+  "properties": {
+    "type": {
+      "type":"string"
+    },
+    "interval": {
+      "type":"string"
+    },
+    "timeout": {
+      "type":"string"
+    },
+    "maxRetries": {
+      "type":"string"
+    },
+    "method": {
+      "type":"string"
+    },
+    "url": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

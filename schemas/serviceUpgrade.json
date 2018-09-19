@@ -1,0 +1,56 @@
+{
+  "required": [
+    "clusterDeploymentConfig"
+  ],
+  "type":"object",
+  "properties": {
+    "clusterDeploymentConfig": {
+      "required": [
+	"clusterId",
+	"datastore",
+	"services"
+      ],
+      "type":"object",
+      "properties": {
+	"clusterId": {
+	  "type":"string"
+	},
+	"datastore": {
+	  "type":"string"
+	},
+	"services": {
+	  "required": [
+	    "serviceDeploymentConfig"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "serviceDeploymentConfig": {
+	      "required": [
+		"serviceId",
+		"serviceInstanceId",
+		"dvPortGroup",
+		"ipPool"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"serviceId": {
+		  "type":"string"
+		},
+		"serviceInstanceId": {
+		  "type":"string"
+		},
+		"dvPortGroup": {
+		  "type":"string"
+		},
+		"ipPool": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

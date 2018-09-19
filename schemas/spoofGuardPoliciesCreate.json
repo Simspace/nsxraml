@@ -1,0 +1,44 @@
+{
+  "required": [
+    "name",
+    "description",
+    "operationMode",
+    "allowLocalIPs",
+    "enforcementPoint"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "operationMode": {
+      "type":"string"
+    },
+    "allowLocalIPs": {
+      "type":"string"
+    },
+    "enforcementPoint": {
+      "required": [
+	"id",
+	"name",
+	"type"
+      ],
+      "type":"object",
+      "properties": {
+	"id": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"type": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

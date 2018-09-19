@@ -1,0 +1,44 @@
+{
+  "required": [
+    "connectionsPerSecond",
+    "memory",
+    "cpu"
+  ],
+  "type":"object",
+  "properties": {
+    "connectionsPerSecond": {
+      "required": [
+	"value"
+      ],
+      "type":"object",
+      "properties": {
+	"value": {
+	  "type":"string"
+	}
+      }
+    },
+    "memory": {
+      "required": [
+	"percentValue"
+      ],
+      "type":"object",
+      "properties": {
+	"percentValue": {
+	  "type":"string"
+	}
+      }
+    },
+    "cpu": {
+      "required": [
+	"percentValue"
+      ],
+      "type":"object",
+      "properties": {
+	"percentValue": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

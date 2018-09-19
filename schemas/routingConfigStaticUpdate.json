@@ -1,0 +1,68 @@
+{
+  "required": [
+    "defaultRoute",
+    "staticRoutes"
+  ],
+  "type":"object",
+  "properties": {
+    "defaultRoute": {
+      "required": [
+	"description",
+	"vnic",
+	"gatewayAddress",
+	"mtu"
+      ],
+      "type":"object",
+      "properties": {
+	"description": {
+	  "type":"string"
+	},
+	"vnic": {
+	  "type":"string"
+	},
+	"gatewayAddress": {
+	  "type":"string"
+	},
+	"mtu": {
+	  "type":"string"
+	}
+      }
+    },
+    "staticRoutes": {
+      "required": [
+	"route"
+      ],
+      "type":"object",
+      "properties": {
+	"route": {
+	  "required": [
+	    "description",
+	    "vnic",
+	    "network",
+	    "nextHop",
+	    "mtu"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "description": {
+	      "type":"string"
+	    },
+	    "vnic": {
+	      "type":"string"
+	    },
+	    "network": {
+	      "type":"string"
+	    },
+	    "nextHop": {
+	      "type":"string"
+	    },
+	    "mtu": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

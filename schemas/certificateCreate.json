@@ -1,0 +1,12 @@
+{
+  "required": [
+    "pemEncoding"
+  ],
+  "type":"object",
+  "properties": {
+    "pemEncoding": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

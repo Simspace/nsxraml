@@ -1,0 +1,20 @@
+{
+  "required": [
+    "objectId",
+    "vnicUuid",
+    "portgroupId"
+  ],
+  "type":"object",
+  "properties": {
+    "objectId": {
+      "type":"string"
+    },
+    "vnicUuid": {
+      "type":"string"
+    },
+    "portgroupId": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

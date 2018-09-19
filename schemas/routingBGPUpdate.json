@@ -1,0 +1,160 @@
+{
+  "required": [
+    "enabled",
+    "localAS",
+    "localASNumber",
+    "redistribution",
+    "bgpNeighbours"
+  ],
+  "type":"object",
+  "properties": {
+    "enabled": {
+      "type":"string"
+    },
+    "localAS": {
+      "type":"string"
+    },
+    "localASNumber": {
+      "type":"string"
+    },
+    "redistribution": {
+      "required": [
+	"enabled",
+	"rules"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	},
+	"rules": {
+	  "required": [
+	    "rule"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "rule": {
+	      "required": [
+		"prefixName",
+		"action",
+		"from"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"prefixName": {
+		  "type":"string"
+		},
+		"action": {
+		  "type":"string"
+		},
+		"from": {
+		  "required": [
+		    "ospf",
+		    "bgp",
+		    "static",
+		    "connected"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "ospf": {
+		      "type":"string"
+		    },
+		    "bgp": {
+		      "type":"string"
+		    },
+		    "static": {
+		      "type":"string"
+		    },
+		    "connected": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "bgpNeighbours": {
+      "required": [
+	"bgpNeighbour"
+      ],
+      "type":"object",
+      "properties": {
+	"bgpNeighbour": {
+	  "required": [
+	    "ipAddress",
+	    "remoteAS",
+	    "remoteASNumber",
+	    "weight",
+	    "holdDownTimer",
+	    "keepAliveTimer",
+	    "password",
+	    "bgpFilters"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ipAddress": {
+	      "type":"string"
+	    },
+	    "remoteAS": {
+	      "type":"string"
+	    },
+	    "remoteASNumber": {
+	      "type":"string"
+	    },
+	    "weight": {
+	      "type":"string"
+	    },
+	    "holdDownTimer": {
+	      "type":"string"
+	    },
+	    "keepAliveTimer": {
+	      "type":"string"
+	    },
+	    "password": {
+	      "type":"string"
+	    },
+	    "bgpFilters": {
+	      "required": [
+		"bgpFilter"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"bgpFilter": {
+		  "required": [
+		    "direction",
+		    "action",
+		    "network",
+		    "ipPrefixGe",
+		    "ipPrefixLe"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "direction": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "network": {
+		      "type":"string"
+		    },
+		    "ipPrefixGe": {
+		      "type":"string"
+		    },
+		    "ipPrefixLe": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

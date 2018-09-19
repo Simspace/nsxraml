@@ -1,0 +1,16 @@
+{
+  "required": [
+    "allocationMode",
+    "ipAddress"
+  ],
+  "type":"object",
+  "properties": {
+    "allocationMode": {
+      "type":"string"
+    },
+    "ipAddress": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

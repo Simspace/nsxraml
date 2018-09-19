@@ -1,0 +1,256 @@
+{
+  "required": [
+    "objectId",
+    "objectTypeName",
+    "vsmUuid",
+    "revision",
+    "name",
+    "clientHandle",
+    "extendedAttributes",
+    "dynamicMemberDefinition",
+    "excludeMember",
+    "member",
+    "scope",
+    "type"
+  ],
+  "type":"object",
+  "properties": {
+    "objectId": {
+      "type":"string"
+    },
+    "objectTypeName": {
+      "type":"string"
+    },
+    "vsmUuid": {
+      "type":"string"
+    },
+    "revision": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    },
+    "clientHandle": {
+      "type":"string"
+    },
+    "extendedAttributes": {
+      "type":"string"
+    },
+    "dynamicMemberDefinition": {
+      "required": [
+	"dynamicSet"
+      ],
+      "type":"object",
+      "properties": {
+	"dynamicSet": {
+	  "required": [
+	    "operator",
+	    "dynamicCriteria"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "operator": {
+	      "type":"string"
+	    },
+	    "dynamicCriteria": {
+	      "required": [
+		"operator",
+		"key",
+		"criteria",
+		"value"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"operator": {
+		  "type":"string"
+		},
+		"key": {
+		  "type":"string"
+		},
+		"criteria": {
+		  "type":"string"
+		},
+		"value": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "excludeMember": {
+      "required": [
+	"objectId",
+	"objectTypeName",
+	"vsmUuid",
+	"revision",
+	"name",
+	"clientHandle",
+	"extendedAttributes",
+	"scope",
+	"type"
+      ],
+      "type":"object",
+      "properties": {
+	"objectId": {
+	  "type":"string"
+	},
+	"objectTypeName": {
+	  "type":"string"
+	},
+	"vsmUuid": {
+	  "type":"string"
+	},
+	"revision": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"clientHandle": {
+	  "type":"string"
+	},
+	"extendedAttributes": {
+	  "type":"string"
+	},
+	"scope": {
+	  "required": [
+	    "id",
+	    "objectTypeName",
+	    "name"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "id": {
+	      "type":"string"
+	    },
+	    "objectTypeName": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"type": {
+	  "required": [
+	    "typeName"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "typeName": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "member": {
+      "required": [
+	"objectId",
+	"objectTypeName",
+	"vsmUuid",
+	"revision",
+	"name",
+	"clientHandle",
+	"extendedAttributes",
+	"scope",
+	"type"
+      ],
+      "type":"object",
+      "properties": {
+	"objectId": {
+	  "type":"string"
+	},
+	"objectTypeName": {
+	  "type":"string"
+	},
+	"vsmUuid": {
+	  "type":"string"
+	},
+	"revision": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"clientHandle": {
+	  "type":"string"
+	},
+	"extendedAttributes": {
+	  "type":"string"
+	},
+	"scope": {
+	  "required": [
+	    "id",
+	    "objectTypeName",
+	    "name"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "id": {
+	      "type":"string"
+	    },
+	    "objectTypeName": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"type": {
+	  "required": [
+	    "typeName"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "typeName": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "scope": {
+      "required": [
+	"id",
+	"objectTypeName",
+	"vsmUuid",
+	"name",
+	"revision"
+      ],
+      "type":"object",
+      "properties": {
+	"id": {
+	  "type":"string"
+	},
+	"objectTypeName": {
+	  "type":"string"
+	},
+	"vsmUuid": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"revision": {
+	  "type":"string"
+	}
+      }
+    },
+    "type": {
+      "required": [
+	"typeName"
+      ],
+      "type":"object",
+      "properties": {
+	"typeName": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

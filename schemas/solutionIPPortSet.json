@@ -1,0 +1,16 @@
+{
+  "required": [
+    "ip",
+    "port"
+  ],
+  "type":"object",
+  "properties": {
+    "ip": {
+      "type":"string"
+    },
+    "port": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

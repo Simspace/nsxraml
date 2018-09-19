@@ -1,0 +1,28 @@
+{
+  "required": [
+    "userName",
+    "password",
+    "remoteAccess",
+    "passwordExpiry",
+    "sshLoginBannerText"
+  ],
+  "type":"object",
+  "properties": {
+    "userName": {
+      "type":"string"
+    },
+    "password": {
+      "type":"string"
+    },
+    "remoteAccess": {
+      "type":"string"
+    },
+    "passwordExpiry": {
+      "type":"string"
+    },
+    "sshLoginBannerText": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

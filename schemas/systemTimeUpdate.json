@@ -1,0 +1,28 @@
+{
+  "required": [
+    "datetime",
+    "timezone",
+    "ntpServer"
+  ],
+  "type":"object",
+  "properties": {
+    "datetime": {
+      "type":"string"
+    },
+    "timezone": {
+      "type":"string"
+    },
+    "ntpServer": {
+      "required": [
+	"string"
+      ],
+      "type":"object",
+      "properties": {
+	"string": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,890 @@
+{
+  "required": [
+    "id",
+    "description",
+    "datacenterMoid",
+    "name",
+    "fqdn",
+    "enableAesni",
+    "enableFips",
+    "vseLogLevel",
+    "autoConfiguration",
+    "features",
+    "cliSettings",
+    "appliances",
+    "vnics"
+  ],
+  "type":"object",
+  "properties": {
+    "id": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "datacenterMoid": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    },
+    "fqdn": {
+      "type":"string"
+    },
+    "enableAesni": {
+      "type":"string"
+    },
+    "enableFips": {
+      "type":"string"
+    },
+    "vseLogLevel": {
+      "type":"string"
+    },
+    "autoConfiguration": {
+      "required": [
+	"enabled",
+	"rulePriority"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	},
+	"rulePriority": {
+	  "type":"string"
+	}
+      }
+    },
+    "features": {
+      "required": [
+	"nat",
+	"dhcp",
+	"ipsec",
+	"syslog",
+	"highAvailability",
+	"routing",
+	"firewall"
+      ],
+      "type":"object",
+      "properties": {
+	"nat": {
+	  "required": [
+	    "natRules"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "natRules": {
+	      "required": [
+		"natRule"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"natRule": {
+		  "required": [
+		    "ruleId",
+		    "ruleTag",
+		    "ruleType",
+		    "action",
+		    "vnic",
+		    "originalAddress",
+		    "translatedAddress",
+		    "dnatMatchSourceAddress",
+		    "snatMatchDestinationAddress",
+		    "loggingEnabled",
+		    "enabled",
+		    "protocol",
+		    "originalPort",
+		    "translatedPort",
+		    "dnatMatchSourcePort",
+		    "snatMatchDestinationPort"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "ruleId": {
+		      "type":"string"
+		    },
+		    "ruleTag": {
+		      "type":"string"
+		    },
+		    "ruleType": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "vnic": {
+		      "type":"string"
+		    },
+		    "originalAddress": {
+		      "type":"string"
+		    },
+		    "translatedAddress": {
+		      "type":"string"
+		    },
+		    "dnatMatchSourceAddress": {
+		      "type":"string"
+		    },
+		    "snatMatchDestinationAddress": {
+		      "type":"string"
+		    },
+		    "loggingEnabled": {
+		      "type":"string"
+		    },
+		    "enabled": {
+		      "type":"string"
+		    },
+		    "protocol": {
+		      "type":"string"
+		    },
+		    "originalPort": {
+		      "type":"string"
+		    },
+		    "translatedPort": {
+		      "type":"string"
+		    },
+		    "dnatMatchSourcePort": {
+		      "type":"string"
+		    },
+		    "snatMatchDestinationPort": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	},
+	"dhcp": {
+	  "required": [
+	    "enabled",
+	    "logging",
+	    "ipPools",
+	    "staticBindings"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "enabled": {
+	      "type":"string"
+	    },
+	    "logging": {
+	      "required": [
+		"enable",
+		"logLevel"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"enable": {
+		  "type":"string"
+		},
+		"logLevel": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "ipPools": {
+	      "required": [
+		"ipPool"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"ipPool": {
+		  "required": [
+		    "autoConfigureDNS",
+		    "poolId",
+		    "ipRange",
+		    "defaultGateway",
+		    "leaseTime"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "autoConfigureDNS": {
+		      "type":"string"
+		    },
+		    "poolId": {
+		      "type":"string"
+		    },
+		    "ipRange": {
+		      "type":"string"
+		    },
+		    "defaultGateway": {
+		      "type":"string"
+		    },
+		    "leaseTime": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    },
+	    "staticBindings": {
+	      "required": [
+		"staticBinding"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"staticBinding": {
+		  "required": [
+		    "autoConfigureDNS",
+		    "bindingId",
+		    "vmId",
+		    "vnicId",
+		    "hostname",
+		    "ipAddress",
+		    "defaultGateway",
+		    "leaseTime"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "autoConfigureDNS": {
+		      "type":"string"
+		    },
+		    "bindingId": {
+		      "type":"string"
+		    },
+		    "vmId": {
+		      "type":"string"
+		    },
+		    "vnicId": {
+		      "type":"string"
+		    },
+		    "hostname": {
+		      "type":"string"
+		    },
+		    "ipAddress": {
+		      "type":"string"
+		    },
+		    "defaultGateway": {
+		      "type":"string"
+		    },
+		    "leaseTime": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	},
+	"ipsec": {
+	  "required": [
+	    "enabled",
+	    "global",
+	    "sites",
+	    "logging"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "enabled": {
+	      "type":"string"
+	    },
+	    "global": {
+	      "required": [
+		"caCertificates",
+		"crlCertificates"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"caCertificates": {
+		  "type":"string"
+		},
+		"crlCertificates": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "sites": {
+	      "required": [
+		"site"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"site": {
+		  "required": [
+		    "enabled",
+		    "name",
+		    "localId",
+		    "localIp",
+		    "peerId",
+		    "encryptionAlgorithm",
+		    "mtu",
+		    "enablePfs",
+		    "dhGroup",
+		    "psk",
+		    "authenticationMode",
+		    "peerSubnets",
+		    "localSubnets"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "enabled": {
+		      "type":"string"
+		    },
+		    "name": {
+		      "type":"string"
+		    },
+		    "localId": {
+		      "type":"string"
+		    },
+		    "localIp": {
+		      "type":"string"
+		    },
+		    "peerId": {
+		      "type":"string"
+		    },
+		    "encryptionAlgorithm": {
+		      "type":"string"
+		    },
+		    "mtu": {
+		      "type":"string"
+		    },
+		    "enablePfs": {
+		      "type":"string"
+		    },
+		    "dhGroup": {
+		      "type":"string"
+		    },
+		    "psk": {
+		      "type":"string"
+		    },
+		    "authenticationMode": {
+		      "type":"string"
+		    },
+		    "peerSubnets": {
+		      "required": [
+			"subnet"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"subnet": {
+			  "type":"string"
+			}
+		      }
+		    },
+		    "localSubnets": {
+		      "required": [
+			"subnet"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"subnet": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    },
+	    "logging": {
+	      "required": [
+		"enable",
+		"logLevel"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"enable": {
+		  "type":"string"
+		},
+		"logLevel": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	},
+	"syslog": {
+	  "required": [
+	    "protocol",
+	    "serverAddresses"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "protocol": {
+	      "type":"string"
+	    },
+	    "serverAddresses": {
+	      "required": [
+		"ipAddress"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"ipAddress": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	},
+	"highAvailability": {
+	  "required": [
+	    "enabled",
+	    "declareDeadTime",
+	    "logging"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "enabled": {
+	      "type":"string"
+	    },
+	    "declareDeadTime": {
+	      "type":"string"
+	    },
+	    "logging": {
+	      "required": [
+		"enable",
+		"logLevel"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"enable": {
+		  "type":"string"
+		},
+		"logLevel": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	},
+	"routing": {
+	  "required": [
+	    "ospf",
+	    "staticRouting"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ospf": {
+	      "required": [
+		"enabled"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"enabled": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "staticRouting": {
+	      "required": [
+		"staticRoutes",
+		"defaultRoute"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"staticRoutes": {
+		  "required": [
+		    "route"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "route": {
+		      "required": [
+			"vnic",
+			"network",
+			"nextHop",
+			"type"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"vnic": {
+			  "type":"string"
+			},
+			"network": {
+			  "type":"string"
+			},
+			"nextHop": {
+			  "type":"string"
+			},
+			"type": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		},
+		"defaultRoute": {
+		  "required": [
+		    "vnic",
+		    "gatewayAddress",
+		    "description"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "vnic": {
+		      "type":"string"
+		    },
+		    "gatewayAddress": {
+		      "type":"string"
+		    },
+		    "description": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	},
+	"firewall": {
+	  "required": [
+	    "firewallRules",
+	    "defaultPolicy"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "firewallRules": {
+	      "required": [
+		"firewallRule"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"firewallRule": {
+		  "required": [
+		    "id",
+		    "ruleTag",
+		    "name",
+		    "ruleType",
+		    "action",
+		    "enabled",
+		    "loggingEnabled",
+		    "matchTranslated",
+		    "application",
+		    "destination",
+		    "source"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "id": {
+		      "type":"string"
+		    },
+		    "ruleTag": {
+		      "type":"string"
+		    },
+		    "name": {
+		      "type":"string"
+		    },
+		    "ruleType": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "enabled": {
+		      "type":"string"
+		    },
+		    "loggingEnabled": {
+		      "type":"string"
+		    },
+		    "matchTranslated": {
+		      "type":"string"
+		    },
+		    "application": {
+		      "required": [
+			"applicationId",
+			"service"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"applicationId": {
+			  "type":"string"
+			},
+			"service": {
+			  "required": [
+			    "protocol",
+			    "port",
+			    "sourcePort"
+			  ],
+			  "type":"object",
+			  "properties": {
+			    "protocol": {
+			      "type":"string"
+			    },
+			    "port": {
+			      "type":"string"
+			    },
+			    "sourcePort": {
+			      "type":"string"
+			    }
+			  }
+			}
+		      }
+		    },
+		    "destination": {
+		      "required": [
+			"exclude"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"exclude": {
+			  "type":"string"
+			},
+			"ipAddress": {
+			  "type":"array",
+			  "items": {
+			    "type":"string"
+			  },
+			  "minItems":0
+			},
+			"groupingObjectId": {
+			  "type":"array",
+			  "items": {
+			    "type":"string"
+			  },
+			  "minItems":0
+			},
+			"vnicGroupId": {
+			  "type":"array",
+			  "items": {
+			    "type":"string"
+			  },
+			  "minItems":0
+			}
+		      }
+		    },
+		    "source": {
+		      "required": [
+			"exclude"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"exclude": {
+			  "type":"string"
+			},
+			"ipAddress": {
+			  "type":"array",
+			  "items": {
+			    "type":"string"
+			  },
+			  "minItems":0
+			},
+			"groupingObjectId": {
+			  "type":"array",
+			  "items": {
+			    "type":"string"
+			  },
+			  "minItems":0
+			},
+			"vnicGroupId": {
+			  "type":"array",
+			  "items": {
+			    "type":"string"
+			  },
+			  "minItems":0
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    },
+	    "defaultPolicy": {
+	      "required": [
+		"action",
+		"loggingEnabled"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"action": {
+		  "type":"string"
+		},
+		"loggingEnabled": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "cliSettings": {
+      "required": [
+	"remoteAccess",
+	"userName"
+      ],
+      "type":"object",
+      "properties": {
+	"remoteAccess": {
+	  "type":"string"
+	},
+	"userName": {
+	  "type":"string"
+	}
+      }
+    },
+    "appliances": {
+      "required": [
+	"applianceSize",
+	"appliance"
+      ],
+      "type":"object",
+      "properties": {
+	"applianceSize": {
+	  "type":"string"
+	},
+	"appliance": {
+	  "required": [
+	    "haAdminState",
+	    "resourcePoolId",
+	    "datastoreId",
+	    "vmFolderId"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "haAdminState": {
+	      "type":"string"
+	    },
+	    "resourcePoolId": {
+	      "type":"string"
+	    },
+	    "datastoreId": {
+	      "type":"string"
+	    },
+	    "vmFolderId": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "vnics": {
+      "required": [
+	"vnic"
+      ],
+      "type":"object",
+      "properties": {
+	"vnic": {
+	  "required": [
+	    "index",
+	    "name",
+	    "type",
+	    "portgroupId",
+	    "mtu",
+	    "enableProxyArp",
+	    "enableSendRedirects",
+	    "isConnected",
+	    "outShapingPolicy",
+	    "inShapingPolicy",
+	    "addressGroups"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "index": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    },
+	    "type": {
+	      "type":"string"
+	    },
+	    "portgroupId": {
+	      "type":"string"
+	    },
+	    "mtu": {
+	      "type":"string"
+	    },
+	    "enableProxyArp": {
+	      "type":"string"
+	    },
+	    "enableSendRedirects": {
+	      "type":"string"
+	    },
+	    "isConnected": {
+	      "type":"string"
+	    },
+	    "outShapingPolicy": {
+	      "required": [
+		"averageBandwidth",
+		"peakBandwidth",
+		"burstSize",
+		"enabled",
+		"inherited"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"averageBandwidth": {
+		  "type":"string"
+		},
+		"peakBandwidth": {
+		  "type":"string"
+		},
+		"burstSize": {
+		  "type":"string"
+		},
+		"enabled": {
+		  "type":"string"
+		},
+		"inherited": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "inShapingPolicy": {
+	      "required": [
+		"averageBandwidth",
+		"peakBandwidth",
+		"burstSize",
+		"enabled",
+		"inherited"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"averageBandwidth": {
+		  "type":"string"
+		},
+		"peakBandwidth": {
+		  "type":"string"
+		},
+		"burstSize": {
+		  "type":"string"
+		},
+		"enabled": {
+		  "type":"string"
+		},
+		"inherited": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "addressGroups": {
+	      "required": [
+		"addressGroup"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"addressGroup": {
+		  "required": [
+		    "primaryAddress",
+		    "subnetMask",
+		    "secondaryAddresses"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "primaryAddress": {
+		      "type":"string"
+		    },
+		    "subnetMask": {
+		      "type":"string"
+		    },
+		    "secondaryAddresses": {
+		      "required": [
+			"ipAddress"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"ipAddress": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

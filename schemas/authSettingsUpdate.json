@@ -1,0 +1,256 @@
+{
+  "required": [
+    "passwordAuthentication"
+  ],
+  "type":"object",
+  "properties": {
+    "passwordAuthentication": {
+      "required": [
+	"authenticationTimeout",
+	"secondaryAuthServer",
+	"primaryAuthServers"
+      ],
+      "type":"object",
+      "properties": {
+	"authenticationTimeout": {
+	  "type":"string"
+	},
+	"secondaryAuthServer": {
+	  "required": [
+	    "com.vmware.vshield.edge.sslvpn.dto.AdAuthServerDto"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "com.vmware.vshield.edge.sslvpn.dto.AdAuthServerDto": {
+	      "required": [
+		"ip",
+		"port",
+		"timeOut",
+		"enableSsl",
+		"searchBase",
+		"bindDomainName",
+		"bindPassword",
+		"loginAttributeName",
+		"searchFilter",
+		"terminateSessionOnAuthFails",
+		"enabled"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"ip": {
+		  "type":"string"
+		},
+		"port": {
+		  "type":"string"
+		},
+		"timeOut": {
+		  "type":"string"
+		},
+		"enableSsl": {
+		  "type":"string"
+		},
+		"searchBase": {
+		  "type":"string"
+		},
+		"bindDomainName": {
+		  "type":"string"
+		},
+		"bindPassword": {
+		  "type":"string"
+		},
+		"loginAttributeName": {
+		  "type":"string"
+		},
+		"searchFilter": {
+		  "type":"string"
+		},
+		"terminateSessionOnAuthFails": {
+		  "type":"string"
+		},
+		"enabled": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	},
+	"primaryAuthServers": {
+	  "required": [
+	    "com.vmware.vshield.edge.sslvpn.dto.RsaAuthServerDto",
+	    "com.vmware.vshield.edge.sslvpn.dto.LocalAuthServerDto",
+	    "com.vmware.vshield.edge.sslvpn.dto.RadiusAuthServerDto",
+	    "com.vmware.vshield.edge.sslvpn.dto.LdapAuthServerDto"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "com.vmware.vshield.edge.sslvpn.dto.RsaAuthServerDto": {
+	      "required": [
+		"timeOut",
+		"sourceIp"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"timeOut": {
+		  "type":"string"
+		},
+		"sourceIp": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "com.vmware.vshield.edge.sslvpn.dto.LocalAuthServerDto": {
+	      "required": [
+		"enabled",
+		"accountLockoutPolicy",
+		"passwordPolicy"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"enabled": {
+		  "type":"string"
+		},
+		"accountLockoutPolicy": {
+		  "required": [
+		    "retryCount",
+		    "retryDuration",
+		    "lockoutDuration"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "retryCount": {
+		      "type":"string"
+		    },
+		    "retryDuration": {
+		      "type":"string"
+		    },
+		    "lockoutDuration": {
+		      "type":"string"
+		    }
+		  }
+		},
+		"passwordPolicy": {
+		  "required": [
+		    "minLength",
+		    "maxLength",
+		    "minAlphabets",
+		    "minDigits",
+		    "minSpecialChar",
+		    "allowUserIdWithinPassword",
+		    "passwordLifeTime",
+		    "expiryNotification"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "minLength": {
+		      "type":"string"
+		    },
+		    "maxLength": {
+		      "type":"string"
+		    },
+		    "minAlphabets": {
+		      "type":"string"
+		    },
+		    "minDigits": {
+		      "type":"string"
+		    },
+		    "minSpecialChar": {
+		      "type":"string"
+		    },
+		    "allowUserIdWithinPassword": {
+		      "type":"string"
+		    },
+		    "passwordLifeTime": {
+		      "type":"string"
+		    },
+		    "expiryNotification": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    },
+	    "com.vmware.vshield.edge.sslvpn.dto.RadiusAuthServerDto": {
+	      "required": [
+		"ip",
+		"port",
+		"timeOut",
+		"secret",
+		"nasIp",
+		"retryCount"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"ip": {
+		  "type":"string"
+		},
+		"port": {
+		  "type":"string"
+		},
+		"timeOut": {
+		  "type":"string"
+		},
+		"secret": {
+		  "type":"string"
+		},
+		"nasIp": {
+		  "type":"string"
+		},
+		"retryCount": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "com.vmware.vshield.edge.sslvpn.dto.LdapAuthServerDto": {
+	      "required": [
+		"ip",
+		"port",
+		"timeOut",
+		"enableSsl",
+		"searchBase",
+		"bindDomainName",
+		"bindPassword",
+		"loginAttributeName",
+		"searchFilter",
+		"enabled"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"ip": {
+		  "type":"string"
+		},
+		"port": {
+		  "type":"string"
+		},
+		"timeOut": {
+		  "type":"string"
+		},
+		"enableSsl": {
+		  "type":"string"
+		},
+		"searchBase": {
+		  "type":"string"
+		},
+		"bindDomainName": {
+		  "type":"string"
+		},
+		"bindPassword": {
+		  "type":"string"
+		},
+		"loginAttributeName": {
+		  "type":"string"
+		},
+		"searchFilter": {
+		  "type":"string"
+		},
+		"enabled": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

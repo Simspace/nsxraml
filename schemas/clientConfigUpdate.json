@@ -1,0 +1,32 @@
+{
+  "required": [
+    "autoReconnect",
+    "upgradeNotification",
+    "fullTunnel"
+  ],
+  "type":"object",
+  "properties": {
+    "autoReconnect": {
+      "type":"string"
+    },
+    "upgradeNotification": {
+      "type":"string"
+    },
+    "fullTunnel": {
+      "required": [
+	"excludeLocalSubnets",
+	"gatewayIp"
+      ],
+      "type":"object",
+      "properties": {
+	"excludeLocalSubnets": {
+	  "type":"string"
+	},
+	"gatewayIp": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

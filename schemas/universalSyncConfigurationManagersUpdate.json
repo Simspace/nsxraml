@@ -1,0 +1,24 @@
+{
+  "required": [
+    "uuid",
+    "nsxManagerIp",
+    "certificateThumbprint",
+    "isPrimary"
+  ],
+  "type":"object",
+  "properties": {
+    "uuid": {
+      "type":"string"
+    },
+    "nsxManagerIp": {
+      "type":"string"
+    },
+    "certificateThumbprint": {
+      "type":"string"
+    },
+    "isPrimary": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

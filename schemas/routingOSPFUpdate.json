@@ -1,0 +1,152 @@
+{
+  "required": [
+    "enabled",
+    "redistribution",
+    "ospfInterfaces",
+    "ospfAreas"
+  ],
+  "type":"object",
+  "properties": {
+    "enabled": {
+      "type":"string"
+    },
+    "redistribution": {
+      "required": [
+	"enabled",
+	"rules"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	},
+	"rules": {
+	  "required": [
+	    "rule"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "rule": {
+	      "required": [
+		"prefixName",
+		"action",
+		"from"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"prefixName": {
+		  "type":"string"
+		},
+		"action": {
+		  "type":"string"
+		},
+		"from": {
+		  "required": [
+		    "ospf",
+		    "bgp",
+		    "static",
+		    "connected"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "ospf": {
+		      "type":"string"
+		    },
+		    "bgp": {
+		      "type":"string"
+		    },
+		    "static": {
+		      "type":"string"
+		    },
+		    "connected": {
+		      "type":"string"
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "ospfInterfaces": {
+      "required": [
+	"ospfInterface"
+      ],
+      "type":"object",
+      "properties": {
+	"ospfInterface": {
+	  "required": [
+	    "vnic",
+	    "areaId",
+	    "helloInterval",
+	    "deadInterval",
+	    "priority",
+	    "cost"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "vnic": {
+	      "type":"string"
+	    },
+	    "areaId": {
+	      "type":"string"
+	    },
+	    "helloInterval": {
+	      "type":"string"
+	    },
+	    "deadInterval": {
+	      "type":"string"
+	    },
+	    "priority": {
+	      "type":"string"
+	    },
+	    "cost": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "ospfAreas": {
+      "required": [
+	"ospfArea"
+      ],
+      "type":"object",
+      "properties": {
+	"ospfArea": {
+	  "required": [
+	    "areaId",
+	    "type",
+	    "authentication"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "areaId": {
+	      "type":"string"
+	    },
+	    "type": {
+	      "type":"string"
+	    },
+	    "authentication": {
+	      "required": [
+		"type",
+		"value"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"type": {
+		  "type":"string"
+		},
+		"value": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,16 @@
+{
+  "required": [
+    "action",
+    "loggingEnabled"
+  ],
+  "type":"object",
+  "properties": {
+    "action": {
+      "type":"string"
+    },
+    "loggingEnabled": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

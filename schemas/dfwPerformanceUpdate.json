@@ -1,0 +1,24 @@
+{
+  "required": [
+    "layer3RuleOptimize",
+    "layer2RuleOptimize",
+    "tcpStrictOption",
+    "autoDraftDisabled"
+  ],
+  "type":"object",
+  "properties": {
+    "layer3RuleOptimize": {
+      "type":"boolean"
+    },
+    "layer2RuleOptimize": {
+      "type":"boolean"
+    },
+    "tcpStrictOption": {
+      "type":"boolean"
+    },
+    "autoDraftDisabled": {
+      "type":"boolean"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

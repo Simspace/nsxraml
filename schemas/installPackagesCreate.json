@@ -1,0 +1,84 @@
+{
+  "required": [
+    "profileName",
+    "startClientOnLogon",
+    "hideSystrayIcon",
+    "rememberPassword",
+    "silentModeOperation",
+    "silentModeInstallation",
+    "hideNetworkAdaptor",
+    "createDesktopIcon",
+    "enforceServerSecurityCertValidation",
+    "createLinuxClient",
+    "createMacClient",
+    "description",
+    "enabled",
+    "gatewayList"
+  ],
+  "type":"object",
+  "properties": {
+    "profileName": {
+      "type":"string"
+    },
+    "startClientOnLogon": {
+      "type":"string"
+    },
+    "hideSystrayIcon": {
+      "type":"string"
+    },
+    "rememberPassword": {
+      "type":"string"
+    },
+    "silentModeOperation": {
+      "type":"string"
+    },
+    "silentModeInstallation": {
+      "type":"string"
+    },
+    "hideNetworkAdaptor": {
+      "type":"string"
+    },
+    "createDesktopIcon": {
+      "type":"string"
+    },
+    "enforceServerSecurityCertValidation": {
+      "type":"string"
+    },
+    "createLinuxClient": {
+      "type":"string"
+    },
+    "createMacClient": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    },
+    "gatewayList": {
+      "required": [
+	"gateway"
+      ],
+      "type":"object",
+      "properties": {
+	"gateway": {
+	  "required": [
+	    "hostName",
+	    "port"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "hostName": {
+	      "type":"string"
+	    },
+	    "port": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

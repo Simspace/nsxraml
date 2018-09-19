@@ -1,0 +1,44 @@
+{
+  "required": [
+    "name",
+    "description",
+    "ipPoolId",
+    "resourcePoolId",
+    "hostId",
+    "datastoreId",
+    "deployType",
+    "networkId",
+    "password"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "ipPoolId": {
+      "type":"string"
+    },
+    "resourcePoolId": {
+      "type":"string"
+    },
+    "hostId": {
+      "type":"string"
+    },
+    "datastoreId": {
+      "type":"string"
+    },
+    "deployType": {
+      "type":"string"
+    },
+    "networkId": {
+      "type":"string"
+    },
+    "password": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

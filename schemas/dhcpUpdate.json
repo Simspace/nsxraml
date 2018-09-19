@@ -1,0 +1,292 @@
+{
+  "required": [
+    "enabled",
+    "logging",
+    "ipPools",
+    "staticBindings"
+  ],
+  "type":"object",
+  "properties": {
+    "enabled": {
+      "type":"string"
+    },
+    "logging": {
+      "required": [
+	"enable",
+	"logLevel"
+      ],
+      "type":"object",
+      "properties": {
+	"enable": {
+	  "type":"string"
+	},
+	"logLevel": {
+	  "type":"string"
+	}
+      }
+    },
+    "ipPools": {
+      "required": [
+	"ipPool"
+      ],
+      "type":"object",
+      "properties": {
+	"ipPool": {
+	  "required": [
+	    "ipRange",
+	    "defaultGateway",
+	    "subnetMask",
+	    "domainName",
+	    "primaryNameServer",
+	    "secondaryNameServer",
+	    "leaseTime",
+	    "autoConfigDNS",
+	    "nextServer",
+	    "dhcpOptions"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ipRange": {
+	      "type":"string"
+	    },
+	    "defaultGateway": {
+	      "type":"string"
+	    },
+	    "subnetMask": {
+	      "type":"string"
+	    },
+	    "domainName": {
+	      "type":"string"
+	    },
+	    "primaryNameServer": {
+	      "type":"string"
+	    },
+	    "secondaryNameServer": {
+	      "type":"string"
+	    },
+	    "leaseTime": {
+	      "type":"string"
+	    },
+	    "autoConfigDNS": {
+	      "type":"string"
+	    },
+	    "nextServer": {
+	      "type":"string"
+	    },
+	    "dhcpOptions": {
+	      "required": [
+		"option66",
+		"option67",
+		"option26",
+		"other",
+		"option150",
+		"option121"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"option66": {
+		  "type":"string"
+		},
+		"option67": {
+		  "type":"string"
+		},
+		"option26": {
+		  "type":"string"
+		},
+		"other": {
+		  "required": [
+		    "code",
+		    "value"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "code": {
+		      "type":"string"
+		    },
+		    "value": {
+		      "type":"string"
+		    }
+		  }
+		},
+		"option150": {
+		  "required": [
+		    "server"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "server": {
+		      "type":"string"
+		    }
+		  }
+		},
+		"option121": {
+		  "required": [
+		    "staticRoute"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "staticRoute": {
+		      "required": [
+			"destinationSubnet",
+			"router"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"destinationSubnet": {
+			  "type":"string"
+			},
+			"router": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "staticBindings": {
+      "required": [
+	"staticBinding"
+      ],
+      "type":"object",
+      "properties": {
+	"staticBinding": {
+	  "required": [
+	    "macAddress",
+	    "vmId",
+	    "vnicId",
+	    "hostname",
+	    "ipAddress",
+	    "subnetMask",
+	    "defaultGateway",
+	    "domainName",
+	    "primaryNameServer",
+	    "secondaryNameServer",
+	    "leaseTime",
+	    "autoConfigDNS",
+	    "nextServer",
+	    "dhcpOptions"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "macAddress": {
+	      "type":"string"
+	    },
+	    "vmId": {
+	      "type":"string"
+	    },
+	    "vnicId": {
+	      "type":"string"
+	    },
+	    "hostname": {
+	      "type":"string"
+	    },
+	    "ipAddress": {
+	      "type":"string"
+	    },
+	    "subnetMask": {
+	      "type":"string"
+	    },
+	    "defaultGateway": {
+	      "type":"string"
+	    },
+	    "domainName": {
+	      "type":"string"
+	    },
+	    "primaryNameServer": {
+	      "type":"string"
+	    },
+	    "secondaryNameServer": {
+	      "type":"string"
+	    },
+	    "leaseTime": {
+	      "type":"string"
+	    },
+	    "autoConfigDNS": {
+	      "type":"string"
+	    },
+	    "nextServer": {
+	      "type":"string"
+	    },
+	    "dhcpOptions": {
+	      "required": [
+		"option66",
+		"option67",
+		"option26",
+		"other",
+		"option150",
+		"option121"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"option66": {
+		  "type":"string"
+		},
+		"option67": {
+		  "type":"string"
+		},
+		"option26": {
+		  "type":"string"
+		},
+		"other": {
+		  "required": [
+		    "code",
+		    "value"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "code": {
+		      "type":"string"
+		    },
+		    "value": {
+		      "type":"string"
+		    }
+		  }
+		},
+		"option150": {
+		  "required": [
+		    "server"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "server": {
+		      "type":"string"
+		    }
+		  }
+		},
+		"option121": {
+		  "required": [
+		    "staticRoute"
+		  ],
+		  "type":"object",
+		  "properties": {
+		    "staticRoute": {
+		      "required": [
+			"destinationSubnet",
+			"router"
+		      ],
+		      "type":"object",
+		      "properties": {
+			"destinationSubnet": {
+			  "type":"string"
+			},
+			"router": {
+			  "type":"string"
+			}
+		      }
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

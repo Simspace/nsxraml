@@ -1,0 +1,128 @@
+{
+  "required": [
+    "objectId",
+    "name",
+    "description",
+    "revision",
+    "objectTypeName",
+    "extendedAttributes",
+    "inheritanceAllowed",
+    "member",
+    "scope",
+    "type"
+  ],
+  "type":"object",
+  "properties": {
+    "objectId": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "revision": {
+      "type":"string"
+    },
+    "objectTypeName": {
+      "type":"string"
+    },
+    "extendedAttributes": {
+      "type":"string"
+    },
+    "inheritanceAllowed": {
+      "type":"string"
+    },
+    "member": {
+      "required": [
+	"objectId",
+	"name",
+	"revision",
+	"objectTypeName",
+	"extendedAttributes",
+	"scope",
+	"type"
+      ],
+      "type":"object",
+      "properties": {
+	"objectId": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"revision": {
+	  "type":"string"
+	},
+	"objectTypeName": {
+	  "type":"string"
+	},
+	"extendedAttributes": {
+	  "type":"string"
+	},
+	"scope": {
+	  "required": [
+	    "id",
+	    "objectTypeName",
+	    "name"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "id": {
+	      "type":"string"
+	    },
+	    "objectTypeName": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"type": {
+	  "required": [
+	    "typeName"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "typeName": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "scope": {
+      "required": [
+	"id",
+	"objectTypeName",
+	"name"
+      ],
+      "type":"object",
+      "properties": {
+	"id": {
+	  "type":"string"
+	},
+	"objectTypeName": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	}
+      }
+    },
+    "type": {
+      "required": [
+	"typeName"
+      ],
+      "type":"object",
+      "properties": {
+	"typeName": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

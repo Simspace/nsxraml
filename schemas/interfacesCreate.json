@@ -1,0 +1,60 @@
+{
+  "required": [
+    "interface"
+  ],
+  "type":"object",
+  "properties": {
+    "interface": {
+      "required": [
+	"name",
+	"mtu",
+	"type",
+	"isConnected",
+	"connectedToId",
+	"addressGroups"
+      ],
+      "type":"object",
+      "properties": {
+	"name": {
+	  "type":"string"
+	},
+	"mtu": {
+	  "type":"string"
+	},
+	"type": {
+	  "type":"string"
+	},
+	"isConnected": {
+	  "type":"string"
+	},
+	"connectedToId": {
+	  "type":"string"
+	},
+	"addressGroups": {
+	  "required": [
+	    "addressGroup"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "addressGroup": {
+	      "required": [
+		"primaryAddress",
+		"subnetMask"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"primaryAddress": {
+		  "type":"string"
+		},
+		"subnetMask": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

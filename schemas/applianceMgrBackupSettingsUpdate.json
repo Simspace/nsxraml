@@ -1,0 +1,96 @@
+{
+  "required": [
+    "excludeTables",
+    "backupFrequency",
+    "ftpSettings"
+  ],
+  "type":"object",
+  "properties": {
+    "excludeTables": {
+      "required": [
+	"excludeTable"
+      ],
+      "type":"object",
+      "properties": {
+	"excludeTable": {
+	  "type":"string"
+	}
+      }
+    },
+    "backupFrequency": {
+      "required": [
+	"frequency",
+	"dayOfWeek",
+	"hourOfDay",
+	"minuteOfHour"
+      ],
+      "type":"object",
+      "properties": {
+	"frequency": {
+	  "type":"string"
+	},
+	"dayOfWeek": {
+	  "type":"string"
+	},
+	"hourOfDay": {
+	  "type":"string"
+	},
+	"minuteOfHour": {
+	  "type":"string"
+	}
+      }
+    },
+    "ftpSettings": {
+      "required": [
+	"transferProtocol",
+	"hostNameIPAddress",
+	"port",
+	"userName",
+	"password",
+	"backupDirectory",
+	"filenamePrefix",
+	"passPhrase",
+	"passiveMode",
+	"useEPRT",
+	"useEPSV"
+      ],
+      "type":"object",
+      "properties": {
+	"transferProtocol": {
+	  "type":"string"
+	},
+	"hostNameIPAddress": {
+	  "type":"string"
+	},
+	"port": {
+	  "type":"string"
+	},
+	"userName": {
+	  "type":"string"
+	},
+	"password": {
+	  "type":"string"
+	},
+	"backupDirectory": {
+	  "type":"string"
+	},
+	"filenamePrefix": {
+	  "type":"string"
+	},
+	"passPhrase": {
+	  "type":"string"
+	},
+	"passiveMode": {
+	  "type":"string"
+	},
+	"useEPRT": {
+	  "type":"string"
+	},
+	"useEPSV": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

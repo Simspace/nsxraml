@@ -1,0 +1,60 @@
+{
+  "required": [
+    "tcpPickOngoingConnections",
+    "tcpAllowOutOfWindowPackets",
+    "tcpSendResetForClosedVsePorts",
+    "dropInvalidTraffic",
+    "logInvalidTraffic",
+    "tcpTimeoutOpen",
+    "tcpTimeoutEstablished",
+    "tcpTimeoutClose",
+    "udpTimeout",
+    "icmpTimeout",
+    "icmp6Timeout",
+    "ipGenericTimeout",
+    "enableSynFloodProtection"
+  ],
+  "type":"object",
+  "properties": {
+    "tcpPickOngoingConnections": {
+      "type":"string"
+    },
+    "tcpAllowOutOfWindowPackets": {
+      "type":"string"
+    },
+    "tcpSendResetForClosedVsePorts": {
+      "type":"string"
+    },
+    "dropInvalidTraffic": {
+      "type":"string"
+    },
+    "logInvalidTraffic": {
+      "type":"string"
+    },
+    "tcpTimeoutOpen": {
+      "type":"string"
+    },
+    "tcpTimeoutEstablished": {
+      "type":"string"
+    },
+    "tcpTimeoutClose": {
+      "type":"string"
+    },
+    "udpTimeout": {
+      "type":"string"
+    },
+    "icmpTimeout": {
+      "type":"string"
+    },
+    "icmp6Timeout": {
+      "type":"string"
+    },
+    "ipGenericTimeout": {
+      "type":"string"
+    },
+    "enableSynFloodProtection": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

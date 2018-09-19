@@ -1,0 +1,76 @@
+{
+  "required": [
+    "objectId",
+    "objectTypeName",
+    "revision",
+    "name",
+    "clientHandle",
+    "extendedAttributes",
+    "isUniversal",
+    "inheritanceAllowed",
+    "scope",
+    "type"
+  ],
+  "type":"object",
+  "properties": {
+    "objectId": {
+      "type":"string"
+    },
+    "objectTypeName": {
+      "type":"string"
+    },
+    "revision": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    },
+    "clientHandle": {
+      "type":"string"
+    },
+    "extendedAttributes": {
+      "type":"string"
+    },
+    "isUniversal": {
+      "type":"string"
+    },
+    "inheritanceAllowed": {
+      "type":"string"
+    },
+    "scope": {
+      "required": [
+	"id",
+	"objectTypeName",
+	"name",
+	"revision"
+      ],
+      "type":"object",
+      "properties": {
+	"id": {
+	  "type":"string"
+	},
+	"objectTypeName": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"revision": {
+	  "type":"string"
+	}
+      }
+    },
+    "type": {
+      "required": [
+	"typeName"
+      ],
+      "type":"object",
+      "properties": {
+	"typeName": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

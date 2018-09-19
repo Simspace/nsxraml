@@ -1,0 +1,20 @@
+{
+  "required": [
+    "pemEncoding",
+    "privateKey",
+    "passphrase"
+  ],
+  "type":"object",
+  "properties": {
+    "pemEncoding": {
+      "type":"string"
+    },
+    "privateKey": {
+      "type":"string"
+    },
+    "passphrase": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

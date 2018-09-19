@@ -1,0 +1,40 @@
+{
+  "required": [
+    "contextId",
+    "ipfixEnabled",
+    "observationDomainId",
+    "flowTimeout",
+    "collector"
+  ],
+  "type":"object",
+  "properties": {
+    "contextId": {
+      "type":"string"
+    },
+    "ipfixEnabled": {
+      "type":"string"
+    },
+    "observationDomainId": {
+      "type":"string"
+    },
+    "flowTimeout": {
+      "type":"string"
+    },
+    "collector": {
+      "required": [
+	"ip",
+	"port"
+      ],
+      "type":"object",
+      "properties": {
+	"ip": {
+	  "type":"string"
+	},
+	"port": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

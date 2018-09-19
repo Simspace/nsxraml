@@ -1,0 +1,72 @@
+{
+  "required": [
+    "spoofguard"
+  ],
+  "type":"object",
+  "properties": {
+    "spoofguard": {
+      "required": [
+	"id",
+	"vnicUuid",
+	"approvedMacAddress",
+	"approvedBy",
+	"approvedOn",
+	"publishedMacAddress",
+	"publishedBy",
+	"publishedOn",
+	"publishedIpAddress",
+	"approvedIpAddress"
+      ],
+      "type":"object",
+      "properties": {
+	"id": {
+	  "type":"string"
+	},
+	"vnicUuid": {
+	  "type":"string"
+	},
+	"approvedMacAddress": {
+	  "type":"string"
+	},
+	"approvedBy": {
+	  "type":"string"
+	},
+	"approvedOn": {
+	  "type":"string"
+	},
+	"publishedMacAddress": {
+	  "type":"string"
+	},
+	"publishedBy": {
+	  "type":"string"
+	},
+	"publishedOn": {
+	  "type":"string"
+	},
+	"publishedIpAddress": {
+	  "required": [
+	    "ipAddress"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ipAddress": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"approvedIpAddress": {
+	  "required": [
+	    "ipAddress"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "ipAddress": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

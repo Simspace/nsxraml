@@ -1,0 +1,16 @@
+{
+  "required": [
+    "end",
+    "name"
+  ],
+  "type":"object",
+  "properties": {
+    "end": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

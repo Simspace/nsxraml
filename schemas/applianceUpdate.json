@@ -1,0 +1,84 @@
+{
+  "required": [
+    "haAdminState",
+    "resourcePoolId",
+    "datastoreId",
+    "hostId",
+    "vmFolderId",
+    "memoryReservation",
+    "cpuReservation",
+    "customField"
+  ],
+  "type":"object",
+  "properties": {
+    "haAdminState": {
+      "type":"string"
+    },
+    "resourcePoolId": {
+      "type":"string"
+    },
+    "datastoreId": {
+      "type":"string"
+    },
+    "hostId": {
+      "type":"string"
+    },
+    "vmFolderId": {
+      "type":"string"
+    },
+    "memoryReservation": {
+      "required": [
+	"limit",
+	"reservation",
+	"shares"
+      ],
+      "type":"object",
+      "properties": {
+	"limit": {
+	  "type":"string"
+	},
+	"reservation": {
+	  "type":"string"
+	},
+	"shares": {
+	  "type":"string"
+	}
+      }
+    },
+    "cpuReservation": {
+      "required": [
+	"limit",
+	"reservation",
+	"shares"
+      ],
+      "type":"object",
+      "properties": {
+	"limit": {
+	  "type":"string"
+	},
+	"reservation": {
+	  "type":"string"
+	},
+	"shares": {
+	  "type":"string"
+	}
+      }
+    },
+    "customField": {
+      "required": [
+	"key",
+	"value"
+      ],
+      "type":"object",
+      "properties": {
+	"key": {
+	  "type":"string"
+	},
+	"value": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

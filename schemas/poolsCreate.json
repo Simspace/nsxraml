@@ -1,0 +1,64 @@
+{
+  "required": [
+    "name",
+    "description",
+    "transparent",
+    "algorithm",
+    "monitorId",
+    "member"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "transparent": {
+      "type":"string"
+    },
+    "algorithm": {
+      "type":"string"
+    },
+    "monitorId": {
+      "type":"string"
+    },
+    "member": {
+      "required": [
+	"ipAddress",
+	"weight",
+	"port",
+	"minConn",
+	"maxConn",
+	"name",
+	"monitorPort"
+      ],
+      "type":"object",
+      "properties": {
+	"ipAddress": {
+	  "type":"string"
+	},
+	"weight": {
+	  "type":"string"
+	},
+	"port": {
+	  "type":"string"
+	},
+	"minConn": {
+	  "type":"string"
+	},
+	"maxConn": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"monitorPort": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

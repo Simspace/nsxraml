@@ -1,0 +1,20 @@
+{
+  "required": [
+    "ipv4Address",
+    "ipv6Address",
+    "domainList"
+  ],
+  "type":"object",
+  "properties": {
+    "ipv4Address": {
+      "type":"string"
+    },
+    "ipv6Address": {
+      "type":"string"
+    },
+    "domainList": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,292 @@
+{
+  "required": [
+    "enabled",
+    "enableServiceInsertion",
+    "accelerationEnabled",
+    "applicationRule",
+    "monitor",
+    "pool",
+    "applicationProfile",
+    "virtualServer",
+    "logging"
+  ],
+  "type":"object",
+  "properties": {
+    "enabled": {
+      "type":"string"
+    },
+    "enableServiceInsertion": {
+      "type":"string"
+    },
+    "accelerationEnabled": {
+      "type":"string"
+    },
+    "applicationRule": {
+      "required": [
+	"name",
+	"script"
+      ],
+      "type":"object",
+      "properties": {
+	"name": {
+	  "type":"string"
+	},
+	"script": {
+	  "type":"string"
+	}
+      }
+    },
+    "monitor": {
+      "required": [
+	"monitorId",
+	"type",
+	"interval",
+	"timeout",
+	"maxRetries",
+	"method",
+	"url",
+	"name"
+      ],
+      "type":"object",
+      "properties": {
+	"monitorId": {
+	  "type":"string"
+	},
+	"type": {
+	  "type":"string"
+	},
+	"interval": {
+	  "type":"string"
+	},
+	"timeout": {
+	  "type":"string"
+	},
+	"maxRetries": {
+	  "type":"string"
+	},
+	"method": {
+	  "type":"string"
+	},
+	"url": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	}
+      }
+    },
+    "pool": {
+      "required": [
+	"poolId",
+	"name",
+	"description",
+	"transparent",
+	"algorithm",
+	"monitorId",
+	"member"
+      ],
+      "type":"object",
+      "properties": {
+	"poolId": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"description": {
+	  "type":"string"
+	},
+	"transparent": {
+	  "type":"string"
+	},
+	"algorithm": {
+	  "type":"string"
+	},
+	"monitorId": {
+	  "type":"string"
+	},
+	"member": {
+	  "required": [
+	    "memberId",
+	    "ipAddress",
+	    "weight",
+	    "port",
+	    "monitorPort",
+	    "minConn",
+	    "maxConn",
+	    "name"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "memberId": {
+	      "type":"string"
+	    },
+	    "ipAddress": {
+	      "type":"string"
+	    },
+	    "weight": {
+	      "type":"string"
+	    },
+	    "port": {
+	      "type":"string"
+	    },
+	    "monitorPort": {
+	      "type":"string"
+	    },
+	    "minConn": {
+	      "type":"string"
+	    },
+	    "maxConn": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "applicationProfile": {
+      "required": [
+	"applicationProfileId",
+	"name",
+	"insertXForwardedFor",
+	"sslPassthrough",
+	"template",
+	"serverSslEnabled",
+	"clientSsl",
+	"persistence"
+      ],
+      "type":"object",
+      "properties": {
+	"applicationProfileId": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"insertXForwardedFor": {
+	  "type":"string"
+	},
+	"sslPassthrough": {
+	  "type":"string"
+	},
+	"template": {
+	  "type":"string"
+	},
+	"serverSslEnabled": {
+	  "type":"string"
+	},
+	"clientSsl": {
+	  "required": [
+	    "clientAuth",
+	    "serviceCertificate"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "clientAuth": {
+	      "type":"string"
+	    },
+	    "serviceCertificate": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"persistence": {
+	  "required": [
+	    "method",
+	    "cookieName",
+	    "cookieMode"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "method": {
+	      "type":"string"
+	    },
+	    "cookieName": {
+	      "type":"string"
+	    },
+	    "cookieMode": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "virtualServer": {
+      "required": [
+	"virtualServerId",
+	"name",
+	"description",
+	"enabled",
+	"ipAddress",
+	"protocol",
+	"port",
+	"connectionLimit",
+	"connectionRateLimit",
+	"applicationProfileId",
+	"defaultPoolId",
+	"enableServiceInsertion",
+	"accelerationEnabled"
+      ],
+      "type":"object",
+      "properties": {
+	"virtualServerId": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"description": {
+	  "type":"string"
+	},
+	"enabled": {
+	  "type":"string"
+	},
+	"ipAddress": {
+	  "type":"string"
+	},
+	"protocol": {
+	  "type":"string"
+	},
+	"port": {
+	  "type":"string"
+	},
+	"connectionLimit": {
+	  "type":"string"
+	},
+	"connectionRateLimit": {
+	  "type":"string"
+	},
+	"applicationProfileId": {
+	  "type":"string"
+	},
+	"defaultPoolId": {
+	  "type":"string"
+	},
+	"enableServiceInsertion": {
+	  "type":"string"
+	},
+	"accelerationEnabled": {
+	  "type":"string"
+	}
+      }
+    },
+    "logging": {
+      "required": [
+	"enable",
+	"logLevel"
+      ],
+      "type":"object",
+      "properties": {
+	"enable": {
+	  "type":"string"
+	},
+	"logLevel": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

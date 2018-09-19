@@ -1,0 +1,81 @@
+{
+  "properties": {
+    "id": {
+      "type":"string"
+    },
+    "@name": {
+      "type":"string"
+    },
+    "@generationNumber": {
+      "type":"string"
+    },
+    "@timestamp": {
+      "type":"string"
+    },
+    "rule": {
+      "properties": {
+	"id": {
+	  "type":"string"
+	},
+	"@disabled": {
+	  "type":"string"
+	},
+	"@logged": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"action": {
+	  "type":"string"
+	},
+	"sectionId": {
+	  "type":"string"
+	},
+	"appliedToList": {
+	  "required": [
+	    "appliedTo"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "appliedTo": {
+	      "required": [
+		"name",
+		"value",
+		"type",
+		"isValid"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"name": {
+		  "type":"string"
+		},
+		"value": {
+		  "type":"string"
+		},
+		"type": {
+		  "type":"string"
+		},
+		"isValid": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      },
+      "type":"object",
+      "required": [
+	"name",
+	"action",
+	"sectionId",
+	"appliedToList"
+      ]
+    }
+  },
+  "type":"object",
+  "required": [
+    "rule"
+  ],
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

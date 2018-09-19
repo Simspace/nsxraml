@@ -1,0 +1,24 @@
+{
+  "required": [
+    "protocol",
+    "serverAddresses"
+  ],
+  "type":"object",
+  "properties": {
+    "protocol": {
+      "type":"string"
+    },
+    "serverAddresses": {
+      "required": [
+	"ipAddress"
+      ],
+      "type":"object",
+      "properties": {
+	"ipAddress": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

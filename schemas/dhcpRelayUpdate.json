@@ -1,0 +1,55 @@
+{
+  "required": [
+    "relayAgents",
+    "relayServer"
+  ],
+  "type":"object",
+  "properties": {
+    "relayAgents": {
+      "required": [
+	"relayAgent"
+      ],
+      "type":"object",
+      "properties": {
+	"relayAgent": {
+	  "required": [
+	    "vnicIndex",
+	    "giAddress"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "vnicIndex": {
+	      "type":"string"
+	    },
+	    "giAddress": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "relayServer": {
+      "type":"object",
+      "properties": {
+	"groupingObjectId": {
+	  "type":"array",
+	  "items": {
+	    "type":"string"
+	  },
+	  "minItems":0
+	},
+	"ipAddress": {
+	  "type":"string"
+	},
+	"fqdn": {
+	  "type":"string"
+	}
+      },
+      "required": [
+	"ipAddress",
+	"fqdn"
+      ]
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

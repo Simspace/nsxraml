@@ -1,0 +1,146 @@
+{
+  "required": [
+    "firewallRule"
+  ],
+  "type":"object",
+  "properties": {
+    "firewallRule": {
+      "required": [
+	"ruleTag",
+	"name",
+	"matchTranslated",
+	"direction",
+	"action",
+	"enabled",
+	"loggingEnabled",
+	"description",
+	"application",
+	"destination",
+	"source"
+      ],
+      "type":"object",
+      "properties": {
+	"ruleTag": {
+	  "type":"string"
+	},
+	"name": {
+	  "type":"string"
+	},
+	"matchTranslated": {
+	  "type":"string"
+	},
+	"direction": {
+	  "type":"string"
+	},
+	"action": {
+	  "type":"string"
+	},
+	"enabled": {
+	  "type":"string"
+	},
+	"loggingEnabled": {
+	  "type":"string"
+	},
+	"description": {
+	  "type":"string"
+	},
+	"application": {
+	  "required": [
+	    "applicationId",
+	    "service"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "applicationId": {
+	      "type":"string"
+	    },
+	    "service": {
+	      "required": [
+		"protocol",
+		"port",
+		"sourcePort"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"protocol": {
+		  "type":"string"
+		},
+		"port": {
+		  "type":"string"
+		},
+		"sourcePort": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	},
+	"destination": {
+	  "required": [
+	    "exclude"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "exclude": {
+	      "type":"string"
+	    },
+	    "ipAddress": {
+	      "type":"array",
+	      "items": {
+		"type":"string"
+	      },
+	      "minItems":0
+	    },
+	    "groupingObjectId": {
+	      "type":"array",
+	      "items": {
+		"type":"string"
+	      },
+	      "minItems":0
+	    },
+	    "vnicGroupId": {
+	      "type":"array",
+	      "items": {
+		"type":"string"
+	      },
+	      "minItems":0
+	    }
+	  }
+	},
+	"source": {
+	  "required": [
+	    "exclude"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "exclude": {
+	      "type":"string"
+	    },
+	    "ipAddress": {
+	      "type":"array",
+	      "items": {
+		"type":"string"
+	      },
+	      "minItems":0
+	    },
+	    "groupingObjectId": {
+	      "type":"array",
+	      "items": {
+		"type":"string"
+	      },
+	      "minItems":0
+	    },
+	    "vnicGroupId": {
+	      "type":"array",
+	      "items": {
+		"type":"string"
+	      },
+	      "minItems":0
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

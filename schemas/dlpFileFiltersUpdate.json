@@ -1,0 +1,24 @@
+{
+  "required": [
+    "scanAllFiles",
+    "lastModifiedAfter",
+    "extensionsIncluded",
+    "extensions"
+  ],
+  "type":"object",
+  "properties": {
+    "scanAllFiles": {
+      "type":"string"
+    },
+    "lastModifiedAfter": {
+      "type":"string"
+    },
+    "extensionsIncluded": {
+      "type":"string"
+    },
+    "extensions": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

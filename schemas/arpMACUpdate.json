@@ -1,0 +1,32 @@
+{
+  "required": [
+    "macLearningConfig",
+    "ipDiscoveryConfig"
+  ],
+  "type":"object",
+  "properties": {
+    "macLearningConfig": {
+      "required": [
+	"enabled"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	}
+      }
+    },
+    "ipDiscoveryConfig": {
+      "required": [
+	"enabled"
+      ],
+      "type":"object",
+      "properties": {
+	"enabled": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

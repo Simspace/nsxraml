@@ -1,0 +1,68 @@
+{
+  "required": [
+    "vmnicId",
+    "timeout",
+    "routed",
+    "packet",
+    "resourceType",
+    "ipHeader",
+    "ethHeader"
+  ],
+  "type":"object",
+  "properties": {
+    "vmnicId": {
+      "type":"string"
+    },
+    "timeout": {
+      "type":"string"
+    },
+    "routed": {
+      "type":"string"
+    },
+    "packet": {
+      "type":"string"
+    },
+    "resourceType": {
+      "type":"string"
+    },
+    "ipHeader": {
+      "required": [
+	"ttl",
+	"srcIp",
+	"dstIp"
+      ],
+      "type":"object",
+      "properties": {
+	"ttl": {
+	  "type":"string"
+	},
+	"srcIp": {
+	  "type":"string"
+	},
+	"dstIp": {
+	  "type":"string"
+	}
+      }
+    },
+    "ethHeader": {
+      "required": [
+	"srcMac",
+	"dstMac",
+	"ethType"
+      ],
+      "type":"object",
+      "properties": {
+	"srcMac": {
+	  "type":"string"
+	},
+	"dstMac": {
+	  "type":"string"
+	},
+	"ethType": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

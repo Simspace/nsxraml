@@ -1,0 +1,108 @@
+{
+  "required": [
+    "version",
+    "enabled",
+    "cacheSize",
+    "logging",
+    "dnsViews",
+    "listeners"
+  ],
+  "type":"object",
+  "properties": {
+    "version": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    },
+    "cacheSize": {
+      "type":"string"
+    },
+    "logging": {
+      "required": [
+	"enable",
+	"logLevel"
+      ],
+      "type":"object",
+      "properties": {
+	"enable": {
+	  "type":"string"
+	},
+	"logLevel": {
+	  "type":"string"
+	}
+      }
+    },
+    "dnsViews": {
+      "required": [
+	"dnsView"
+      ],
+      "type":"object",
+      "properties": {
+	"dnsView": {
+	  "required": [
+	    "viewId",
+	    "name",
+	    "enabled",
+	    "recursion",
+	    "forwarders",
+	    "viewMatch"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "viewId": {
+	      "type":"string"
+	    },
+	    "name": {
+	      "type":"string"
+	    },
+	    "enabled": {
+	      "type":"string"
+	    },
+	    "recursion": {
+	      "type":"boolean"
+	    },
+	    "forwarders": {
+	      "required": [
+		"ipAddress"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"ipAddress": {
+		  "type":"string"
+		}
+	      }
+	    },
+	    "viewMatch": {
+	      "required": [
+		"ipAddress",
+		"vnic"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"ipAddress": {
+		  "type":"string"
+		},
+		"vnic": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    },
+    "listeners": {
+      "required": [
+	"ipAddress"
+      ],
+      "type":"object",
+      "properties": {
+	"ipAddress": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

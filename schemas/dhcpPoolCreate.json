@@ -1,0 +1,112 @@
+{
+  "required": [
+    "ipRange",
+    "defaultGateway",
+    "domainName",
+    "primaryNameServer",
+    "secondaryNameServer",
+    "leaseTime",
+    "autoConfigureDNS",
+    "nextServer",
+    "dhcpOptions"
+  ],
+  "type":"object",
+  "properties": {
+    "ipRange": {
+      "type":"string"
+    },
+    "defaultGateway": {
+      "type":"string"
+    },
+    "domainName": {
+      "type":"string"
+    },
+    "primaryNameServer": {
+      "type":"string"
+    },
+    "secondaryNameServer": {
+      "type":"string"
+    },
+    "leaseTime": {
+      "type":"string"
+    },
+    "autoConfigureDNS": {
+      "type":"string"
+    },
+    "nextServer": {
+      "type":"string"
+    },
+    "dhcpOptions": {
+      "required": [
+	"option66",
+	"option67",
+	"option26",
+	"other",
+	"option150",
+	"option121"
+      ],
+      "type":"object",
+      "properties": {
+	"option66": {
+	  "type":"string"
+	},
+	"option67": {
+	  "type":"string"
+	},
+	"option26": {
+	  "type":"string"
+	},
+	"other": {
+	  "required": [
+	    "code",
+	    "value"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "code": {
+	      "type":"string"
+	    },
+	    "value": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"option150": {
+	  "required": [
+	    "server"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "server": {
+	      "type":"string"
+	    }
+	  }
+	},
+	"option121": {
+	  "required": [
+	    "staticRoute"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "staticRoute": {
+	      "required": [
+		"destinationSubnet",
+		"router"
+	      ],
+	      "type":"object",
+	      "properties": {
+		"destinationSubnet": {
+		  "type":"string"
+		},
+		"router": {
+		  "type":"string"
+		}
+	      }
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

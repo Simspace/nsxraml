@@ -1,0 +1,36 @@
+{
+  "required": [
+    "logonLogoffScript"
+  ],
+  "type":"object",
+  "properties": {
+    "logonLogoffScript": {
+      "required": [
+	"objectId",
+	"scriptFileId",
+	"type",
+	"enabled",
+	"description"
+      ],
+      "type":"object",
+      "properties": {
+	"objectId": {
+	  "type":"string"
+	},
+	"scriptFileId": {
+	  "type":"string"
+	},
+	"type": {
+	  "type":"string"
+	},
+	"enabled": {
+	  "type":"string"
+	},
+	"description": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

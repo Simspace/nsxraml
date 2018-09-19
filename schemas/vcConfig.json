@@ -1,0 +1,36 @@
+{
+  "required": [
+    "ipAddress",
+    "userName",
+    "password",
+    "certificateThumbprint",
+    "assignRoleToUser",
+    "pluginDownloadServer",
+    "pluginDownloadPort"
+  ],
+  "type":"object",
+  "properties": {
+    "ipAddress": {
+      "type":"string"
+    },
+    "userName": {
+      "type":"string"
+    },
+    "password": {
+      "type":"string"
+    },
+    "certificateThumbprint": {
+      "type":"string"
+    },
+    "assignRoleToUser": {
+      "type":"string"
+    },
+    "pluginDownloadServer": {
+      "type":"string"
+    },
+    "pluginDownloadPort": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,33 @@
+{
+  "required": [
+    "vnic",
+    "declareDeadTime",
+    "enabled",
+    "ipAddresses"
+  ],
+  "type":"object",
+  "properties": {
+    "vnic": {
+      "type":"string"
+    },
+    "declareDeadTime": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    },
+    "ipAddresses": {
+      "type":"object",
+      "properties": {
+	"ipAddress": {
+	  "type":"array",
+	  "items": {
+	    "type":"string"
+	  },
+	  "minItems":0
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

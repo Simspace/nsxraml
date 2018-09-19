@@ -1,0 +1,39 @@
+{
+  "required": [
+    "name",
+    "url",
+    "description",
+    "enabled",
+    "method"
+  ],
+  "type":"object",
+  "properties": {
+    "method": {
+      "properties": {
+	"name": {
+	  "type":"string"
+	},
+	"data": {
+	  "type":"string"
+	}
+      },
+      "type":"object",
+      "required": [
+	"data"
+      ]
+    },
+    "name": {
+      "type":"string"
+    },
+    "url": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

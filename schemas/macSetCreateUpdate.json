@@ -1,0 +1,44 @@
+{
+  "required": [
+    "objectId",
+    "description",
+    "name",
+    "revision",
+    "objectTypeName",
+    "value",
+    "type"
+  ],
+  "type":"object",
+  "properties": {
+    "objectId": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "name": {
+      "type":"string"
+    },
+    "revision": {
+      "type":"string"
+    },
+    "objectTypeName": {
+      "type":"string"
+    },
+    "value": {
+      "type":"string"
+    },
+    "type": {
+      "required": [
+	"typeName"
+      ],
+      "type":"object",
+      "properties": {
+	"typeName": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

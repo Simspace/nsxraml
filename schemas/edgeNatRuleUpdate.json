@@ -1,0 +1,64 @@
+{
+  "required": [
+    "action",
+    "vnic",
+    "originalAddress",
+    "translatedAddress",
+    "dnatMatchSourceAddress",
+    "snatMatchDestinationAddress",
+    "loggingEnabled",
+    "enabled",
+    "description",
+    "protocol",
+    "translatedPort",
+    "originalPort",
+    "dnatMatchSourcePort",
+    "snatMatchDestinationPort"
+  ],
+  "type":"object",
+  "properties": {
+    "action": {
+      "type":"string"
+    },
+    "vnic": {
+      "type":"string"
+    },
+    "originalAddress": {
+      "type":"string"
+    },
+    "translatedAddress": {
+      "type":"string"
+    },
+    "dnatMatchSourceAddress": {
+      "type":"string"
+    },
+    "snatMatchDestinationAddress": {
+      "type":"string"
+    },
+    "loggingEnabled": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "protocol": {
+      "type":"string"
+    },
+    "translatedPort": {
+      "type":"string"
+    },
+    "originalPort": {
+      "type":"string"
+    },
+    "dnatMatchSourcePort": {
+      "type":"string"
+    },
+    "snatMatchDestinationPort": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

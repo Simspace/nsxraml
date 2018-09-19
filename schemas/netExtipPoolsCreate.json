@@ -1,0 +1,44 @@
+{
+  "required": [
+    "description",
+    "ipRange",
+    "netmask",
+    "gateway",
+    "primaryDns",
+    "secondaryDns",
+    "dnsSuffix",
+    "winsServer",
+    "enabled"
+  ],
+  "type":"object",
+  "properties": {
+    "description": {
+      "type":"string"
+    },
+    "ipRange": {
+      "type":"string"
+    },
+    "netmask": {
+      "type":"string"
+    },
+    "gateway": {
+      "type":"string"
+    },
+    "primaryDns": {
+      "type":"string"
+    },
+    "secondaryDns": {
+      "type":"string"
+    },
+    "dnsSuffix": {
+      "type":"string"
+    },
+    "winsServer": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

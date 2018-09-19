@@ -1,0 +1,36 @@
+{
+  "required": [
+    "description",
+    "network",
+    "enabled",
+    "sendOverTunnel"
+  ],
+  "type":"object",
+  "properties": {
+    "description": {
+      "type":"string"
+    },
+    "network": {
+      "type":"string"
+    },
+    "enabled": {
+      "type":"string"
+    },
+    "sendOverTunnel": {
+      "required": [
+	"ports",
+	"optimize"
+      ],
+      "type":"object",
+      "properties": {
+	"ports": {
+	  "type":"string"
+	},
+	"optimize": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

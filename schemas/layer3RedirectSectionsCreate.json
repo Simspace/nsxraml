@@ -1,0 +1,52 @@
+{
+  "required": [
+    "name",
+    "action",
+    "sectionId",
+    "appliedToList"
+  ],
+  "type":"object",
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "action": {
+      "type":"string"
+    },
+    "sectionId": {
+      "type":"string"
+    },
+    "appliedToList": {
+      "required": [
+	"appliedTo"
+      ],
+      "type":"object",
+      "properties": {
+	"appliedTo": {
+	  "required": [
+	    "name",
+	    "value",
+	    "type",
+	    "isValid"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "name": {
+	      "type":"string"
+	    },
+	    "value": {
+	      "type":"string"
+	    },
+	    "type": {
+	      "type":"string"
+	    },
+	    "isValid": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

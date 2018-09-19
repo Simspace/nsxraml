@@ -1,0 +1,16 @@
+{
+  "required": [
+    "language",
+    "country"
+  ],
+  "type":"object",
+  "properties": {
+    "language": {
+      "type":"string"
+    },
+    "country": {
+      "type":"string"
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

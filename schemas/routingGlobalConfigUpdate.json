@@ -1,0 +1,56 @@
+{
+  "required": [
+    "routerId",
+    "ecmp",
+    "ipPrefixes",
+    "logging"
+  ],
+  "type":"object",
+  "properties": {
+    "routerId": {
+      "type":"string"
+    },
+    "ecmp": {
+      "type":"string"
+    },
+    "ipPrefixes": {
+      "required": [
+	"ipPrefix"
+      ],
+      "type":"object",
+      "properties": {
+	"ipPrefix": {
+	  "required": [
+	    "name",
+	    "ipAddress"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "name": {
+	      "type":"string"
+	    },
+	    "ipAddress": {
+	      "type":"string"
+	    }
+	  }
+	}
+      }
+    },
+    "logging": {
+      "required": [
+	"enable",
+	"logLevel"
+      ],
+      "type":"object",
+      "properties": {
+	"enable": {
+	  "type":"string"
+	},
+	"logLevel": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

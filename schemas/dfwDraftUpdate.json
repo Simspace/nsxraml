@@ -1,0 +1,131 @@
+{
+  "properties": {
+    "name": {
+      "type":"string"
+    },
+    "config": {
+      "required": [
+	"contextId",
+	"layer2Sections",
+	"layer3Sections"
+      ],
+      "type":"object",
+      "properties": {
+	"layer2Sections": {
+	  "required": [
+	    "section"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "section": {
+	      "properties": {
+		"name": {
+		  "type":"string"
+		},
+		"rule": {
+		  "properties": {
+		    "id": {
+		      "type":"string"
+		    },
+		    "@disabled": {
+		      "type":"string"
+		    },
+		    "@logged": {
+		      "type":"string"
+		    },
+		    "name": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "precedence": {
+		      "type":"string"
+		    }
+		  },
+		  "type":"object",
+		  "required": [
+		    "name",
+		    "action",
+		    "precedence"
+		  ]
+		}
+	      },
+	      "type":"object",
+	      "required": [
+		"rule"
+	      ]
+	    }
+	  }
+	},
+	"layer3Sections": {
+	  "required": [
+	    "section"
+	  ],
+	  "type":"object",
+	  "properties": {
+	    "section": {
+	      "properties": {
+		"name": {
+		  "type":"string"
+		},
+		"rule": {
+		  "properties": {
+		    "id": {
+		      "type":"string"
+		    },
+		    "@disabled": {
+		      "type":"string"
+		    },
+		    "@logged": {
+		      "type":"string"
+		    },
+		    "name": {
+		      "type":"string"
+		    },
+		    "action": {
+		      "type":"string"
+		    },
+		    "precedence": {
+		      "type":"string"
+		    }
+		  },
+		  "type":"object",
+		  "required": [
+		    "name",
+		    "action",
+		    "precedence"
+		  ]
+		}
+	      },
+	      "type":"object",
+	      "required": [
+		"rule"
+	      ]
+	    }
+	  }
+	},
+	"contextId": {
+	  "type":"string"
+	}
+      }
+    },
+    "description": {
+      "type":"string"
+    },
+    "preserve": {
+      "type":"string"
+    },
+    "mode": {
+      "type":"string"
+    }
+  },
+  "type":"object",
+  "required": [
+    "description",
+    "preserve",
+    "mode",
+    "config"
+  ],
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

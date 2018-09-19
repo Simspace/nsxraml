@@ -1,0 +1,48 @@
+{
+  "required": [
+    "userId",
+    "password",
+    "firstName",
+    "lastName",
+    "description",
+    "disableUserAccount",
+    "passwordNeverExpires",
+    "allowChangePassword"
+  ],
+  "type":"object",
+  "properties": {
+    "userId": {
+      "type":"string"
+    },
+    "password": {
+      "type":"string"
+    },
+    "firstName": {
+      "type":"string"
+    },
+    "lastName": {
+      "type":"string"
+    },
+    "description": {
+      "type":"string"
+    },
+    "disableUserAccount": {
+      "type":"string"
+    },
+    "passwordNeverExpires": {
+      "type":"string"
+    },
+    "allowChangePassword": {
+      "required": [
+	"changePasswordOnNextLogin"
+      ],
+      "type":"object",
+      "properties": {
+	"changePasswordOnNextLogin": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}

@@ -1,0 +1,24 @@
+{
+  "required": [
+    "featureId",
+    "resourceConfig"
+  ],
+  "type":"object",
+  "properties": {
+    "featureId": {
+      "type":"string"
+    },
+    "resourceConfig": {
+      "required": [
+	"resourceId"
+      ],
+      "type":"object",
+      "properties": {
+	"resourceId": {
+	  "type":"string"
+	}
+      }
+    }
+  },
+  "$schema":"http://json-schema.org/draft-04/schema#"
+}
